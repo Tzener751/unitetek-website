@@ -38,6 +38,26 @@
             transform: scale(1.2);
             filter: brightness(1.1);
         }
+
+
+        #productTab .list-group-item {
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            color: #444;
+        }
+        #productTab .list-group-item.active {
+            background-color: #fff !important;
+            color: var(--brand-blue) !important;
+            border-left: 5px solid var(--brand-blue) !important;
+            font-weight: bold;
+        }
+        #productTab .list-group-item:hover:not(.active) {
+            background-color: #e9ecef;
+        }
+        .tab-pane.fade {
+            transition: opacity 0.2s linear;
+        }
     </style>
 </head>
 <body>
@@ -64,91 +84,95 @@
         </div>
     </nav>
 
-    <main>
-        <div id="mainCarousel" class="carousel slide shadow-sm" data-bs-interval="false">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+    <main class="py-5 bg-light" style="min-height: 600px;">
+        <div class="container bg-white shadow-sm rounded-4 overflow-hidden">
+            <div class="row g-0">
+                <div class="col-md-3 bg-light border-end">
+                    <div class="list-group list-group-flush" id="productTab" role="tablist">
+                        <button class="list-group-item list-group-item-action active py-4 border-0" id="tab-vgcf" data-bs-toggle="pill" data-bs-target="#content-vgcf" type="button" role="tab">
+                            <i class="bi bi-cpu-fill me-2"></i> VGCF 碳管
+                        </button>
+                        <button class="list-group-item list-group-item-action py-4 border-0" id="tab-nal" data-bs-toggle="pill" data-bs-target="#content-nal" type="button" role="tab">
+                            <i class="bi bi-shield-check me-2"></i> UTFR-NAL 協效劑
+                        </button>
+                        <button class="list-group-item list-group-item-action py-4 border-0" id="tab-poc" data-bs-toggle="pill" data-bs-target="#content-poc" type="button" role="tab">
+                            <i class="bi bi-droplet-fill me-2"></i> UTFR-POC 無鹵阻燃
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-9 p-4 p-lg-5">
+                    <div class="tab-content" id="productTabContent">
+                        
+                        <!-- 產品 1: VGCF -->
+                        <div class="tab-pane fade show active" id="content-vgcf" role="tabpanel">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <h2 class="display-6 fw-bold text-primary mb-4">VGCF 碳管</h2>
+                                    <ul class="list-unstyled h5 lh-lg mb-4">
+                                        <li>🔹 <strong>浮動式氣相成長工藝</strong></li>
+                                        <li>🔹 <strong>高溫石墨化處理</strong></li>
+                                        <li>🔹 <strong>長度7微米 / 管徑110奈米</strong></li>
+                                        <li>🔹 <strong>適用於能源、感知器、漿料等</strong></li>
+                                    </ul>
+                                    <div class="d-flex gap-2">
+                                        <a href="contact.html" class="btn btn-primary rounded-pill px-4">詢價</a>
+                                        <a href="./static/pdf/product_vgcf_020526.pdf" target="_blank" class="btn btn-outline-dark rounded-pill px-4">說明書</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                                    <img src="./static/product_vgcf.png" class="img-fluid rounded" style="max-height: 350px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 產品 2: NAL -->
+                        <div class="tab-pane fade" id="content-nal" role="tabpanel">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <h2 class="display-6 fw-bold text-success mb-4">UTFR-NAL 協效劑</h2>
+                                    <ul class="list-unstyled h5 lh-lg mb-4">
+                                        <li>✅ <strong>可替代三氧化二銻</strong></li>
+                                        <li>✅ <strong>鹵素阻燃劑最佳搭檔</strong></li>
+                                        <li>✅ <strong>加工溫度 < 250 ℃</strong></li>
+                                        <li>✅ <strong>高性價比方案</strong></li>
+                                    </ul>
+                                    <div class="d-flex gap-2">
+                                        <a href="contact.html" class="btn btn-success rounded-pill px-4 text-white">詢價</a>
+                                        <a href="./static/pdf/product_NAL_020526.pdf" target="_blank" class="btn btn-outline-dark rounded-pill px-4">說明書</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                                    <img src="./static/product_NAL.png" class="img-fluid rounded" style="max-height: 350px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 產品 3: POC -->
+                        <div class="tab-pane fade" id="content-poc" role="tabpanel">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <h2 class="display-6 fw-bold text-danger mb-4">UTFR-POC 無鹵阻燃</h2>
+                                    <ul class="list-unstyled h5 lh-lg mb-4">
+                                        <li>⭕ <strong>磷氮型複合配方</strong></li>
+                                        <li>⭕ <strong>加工溫度 < 230 ℃</strong></li>
+                                        <li>⭕ <strong>符合環保法規</strong></li>
+                                        <li>⭕ <strong>廣泛應用於橡塑膠</strong></li>
+                                    </ul>
+                                    <div class="d-flex gap-2">
+                                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">詢價</a>
+                                        <a href="./static/pdf/product_POC_020526.pdf" target="_blank" class="btn btn-outline-dark rounded-pill px-4">說明書</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                                    <img src="./static/product_POC.png" class="img-fluid rounded" style="max-height: 350px;">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-
-            <div class="carousel-inner">
-                <div class="carousel-item active py-5 px-0" style="min-height: 550px; background-color: #f0f4f8;">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-lg-5">
-                                <h1 class="display-4 fw-bold text-primary mb-3">VGCF 碳管</h1>
-                                <ul class="list-unstyled mb-5 h5 lh-lg">
-                                    <li>🔹 <strong>浮動式氣相成長工藝</strong></li>
-                                    <li>🔹 <strong>高溫石墨化處理</strong></li>
-                                    <li>🔹 <strong>長度7微米/管徑110奈米</strong></li>
-                                    <li>🔹 <strong>適用於能源/感知器/電子皮膚/漿料塗料等產業</strong></li>
-                                </ul>
-                                <div class="d-flex gap-3 mb-4">
-                                    <a href="contact.html" class="btn btn-primary btn-lg px-5 rounded-pill shadow">立即詢價</a>
-                                    <a href="./static/pdf/product_vgcf_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg px-5 rounded-pill">了解更多</a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-7 text-center">
-                                <img src="./static/product_vgcf.png" class="img-fluid rounded shadow" style="max-height: 550px; object-fit: contain; transform: scale(1.05);">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item py-5 bg-light" style="min-height: 550px;">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-lg-5 mb-4 mb-lg-0">
-                                <h1 class="display-4 fw-bold text-success mb-3">UTFR-NAL 無銻阻燃協效劑</h1>
-                                <ul class="list-unstyled mb-5 h5 lh-lg">
-                                    <li>✅ <strong>不含銻, 可替代三氧化二銻</strong></li>
-                                    <li>✅ <strong>鹵素阻燃劑最好的搭配</strong></li>
-                                    <li>✅ <strong>性價比高</strong></li>
-                                    <li>✅ <strong>適用於加工溫度 < 250 ℃ 之橡塑膠</strong></li>
-                                </ul>
-                                <div class="d-flex gap-3">
-                                    <a href="contact.html" class="btn btn-success btn-lg px-5 rounded-pill shadow">立即詢價</a>
-                                    <a href="./static/pdf/product_NAL_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg px-5 rounded-pill">了解更多</a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-7 text-center">
-                                <img src="./static/product_NAL.png" class="img-fluid rounded shadow" style="max-height: 550px; object-fit: contain; transform: scale(1.1);">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item py-5" style="min-height: 550px; background-color: #fffaf0;">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-lg-5 mb-4 mb-lg-0">
-                                <h1 class="display-4 fw-bold text-danger mb-3">UTFR-POC-260R 無鹵阻燃劑</h1>
-                                <ul class="list-unstyled mb-5 h5 lh-lg">
-                                    <li>⭕ <strong>磷化合物為磷酸鹽類</strong></li>
-                                    <li>⭕ <strong>磷氮型複合配方</strong></li>
-                                    <li>⭕ <strong>加工溫度 < 230 ℃ 之橡塑膠</strong></li>
-                                    <li>⭕ <strong>性價比高</strong></li>
-                                </ul>
-                                <div class="d-flex gap-3">
-                                    <a href="contact.html" class="btn btn-danger btn-lg px-5 rounded-pill shadow">立即詢價</a>
-                                    <a href="./static/pdf/product_POC_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg px-5 rounded-pill">了解更多</a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-7 text-center">
-                                <img src="./static/product_POC.png" class="img-fluid rounded shadow" style="max-height: 600px; object-fit: contain; transform: scale(1.1);">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
         </div>
     </main>
 
