@@ -71,7 +71,8 @@
                 <div class="carousel-item active py-5 px-0" style="min-height: 550px; background-color: #f0f4f8;">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-lg-5">
+                            <!-- 1. 加入 col-12：在手機版會自動撐開成一整行 -->
+                            <div class="col-12 col-lg-5">
                                 <h1 class="display-4 fw-bold text-primary mb-3">VGCF 碳管</h1>
                                 <ul class="list-unstyled mb-5 h5 lh-lg">
                                     <li>🔹 <strong>浮動式氣相成長工藝</strong></li>
@@ -79,14 +80,16 @@
                                     <li>🔹 <strong>長度7微米/管徑110奈米</strong></li>
                                     <li>🔹 <strong>適用於能源/感知器/電子皮膚/漿料塗料等產業</strong></li>
                                 </ul>
-                                <div class="d-flex gap-3">
+                                <div class="d-flex gap-3 mb-4"> <!-- 加入 mb-4 讓手機版文字與圖片間有距離 -->
                                     <a href="contact.html" class="btn btn-primary btn-lg px-5 rounded-pill shadow">立即詢價</a>
                                     <a href="./static/pdf/product_vgcf_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg px-5 rounded-pill">了解更多</a>
                                 </div>
                             </div>
-                            <div class="col-lg-7 text-center">
-                                <!-- 5. 修正圖片路徑 -->
-                                <img src="./static/product_vgcf.png" class="img-fluid rounded shadow" style="max-height: 550px; width: 100%; object-fit: contain; transform: scale(1.05);">
+                            
+                            <!-- 2. 加入 col-12：在手機版圖片會自動跳到文字下方 -->
+                            <div class="col-12 col-lg-7 text-center">
+                                <!-- 移除固定寬度 width: 100%，改用 img-fluid 自動縮放 -->
+                                <img src="./static/product_vgcf.png" class="img-fluid rounded shadow" style="max-height: 550px; object-fit: contain; transform: scale(1.05);">
                             </div>
                         </div>
                     </div>
@@ -96,7 +99,8 @@
                 <div class="carousel-item py-5 bg-light" style="min-height: 550px;">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-lg-5">
+                            <!-- 1. 加入 col-12 並在手機版增加下邊距 mb-4 -->
+                            <div class="col-12 col-lg-5 mb-4 mb-lg-0">
                                 <h1 class="display-4 fw-bold text-success mb-3">UTFR-NAL 無銻阻燃協效劑</h1>
                                 <ul class="list-unstyled mb-5 h5 lh-lg">
                                     <li>✅ <strong>不含銻, 可替代三氧化二銻</strong></li>
@@ -109,8 +113,10 @@
                                     <a href="./static/pdf/product_NAL_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg px-5 rounded-pill">了解更多</a>
                                 </div>
                             </div>
-                            <div class="col-lg-7 text-center">
-                                <img src="./static/product_NAL.png" class="img-fluid rounded shadow" style="max-height: 550px; width: 100%; object-fit: contain; transform: scale(1.1);">
+                            
+                            <!-- 2. 加入 col-12 並移除固定 width: 100% 以防變形 -->
+                            <div class="col-12 col-lg-7 text-center">
+                                <img src="./static/product_NAL.png" class="img-fluid rounded shadow" style="max-height: 550px; object-fit: contain; transform: scale(1.1);">
                             </div>
                         </div>
                     </div>
@@ -120,7 +126,8 @@
                 <div class="carousel-item py-5" style="min-height: 550px; background-color: #fffaf0;">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-lg-5">
+                            <!-- 1. 加入 col-12：在手機版佔滿寬度，並加入 mb-4 避免與下方圖片太近 -->
+                            <div class="col-12 col-lg-5 mb-4 mb-lg-0">
                                 <h1 class="display-4 fw-bold text-danger mb-3">UTFR-POC-260R 無鹵阻燃劑</h1>
                                 <ul class="list-unstyled mb-5 h5 lh-lg">
                                     <li>⭕ <strong>磷化合物為磷酸鹽類</strong></li>
@@ -133,8 +140,11 @@
                                     <a href="./static/pdf/product_POC_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg px-5 rounded-pill">了解更多</a>
                                 </div>
                             </div>
-                            <div class="col-lg-7 text-center">
-                                <img src="./static/product_POC.png" class="img-fluid rounded shadow" style="max-height: 600px; width: 100%; object-fit: contain; transform: scale(1.1);">
+                            
+                            <!-- 2. 加入 col-12：在手機版自動排到文字下方 -->
+                            <div class="col-12 col-lg-7 text-center">
+                                <!-- 移除固定 width: 100%，讓 img-fluid 根據容器自動縮放 -->
+                                <img src="./static/product_POC.png" class="img-fluid rounded shadow" style="max-height: 600px; object-fit: contain; transform: scale(1.1);">
                             </div>
                         </div>
                     </div>
