@@ -161,13 +161,43 @@
         </div>
     </main>
 
-    <footer class="py-4 bg-white border-top">
-        <div class="container text-center">
-            <p class="mb-0 fw-bold text-secondary" style="font-size: 1.5rem; letter-spacing: 0.5px;">
-                Copyright © 2026 日將事業有限公司 UNITETEK INTERNATIONAL CO., LTD. 保留所有權利.
-            </p>
+    <footer class="py-4 bg-light border-top">
+    <div class="container text-center">
+        <!-- 版權宣告文字 -->
+        <p class="text-secondary mb-3">
+            Copyright © 2026 日將事業有限公司 UNITETEK INTERNATIONAL CO., LTD. 保留所有權利。
+        </p>
+
+        <!-- 社群與聯繫圖示 -->
+        <div class="d-flex justify-content-center gap-4">
+            <!-- LINE -->
+            <a href="https://line.me/ti/p/unitetek" target="_blank" class="text-secondary fs-3 social-icon" title="LINE">
+                <i class="fab fa-line"></i>
+            </a>
+            
+            <!-- WeChat 
+            <a href="你的WeChat連結或二維碼頁面" target="_blank" class="text-secondary fs-3 social-icon" title="WeChat">
+                <i class="fab fa-weixin"></i>
+            </a>
+            -->
+            
+            <!-- Email -->
+            <a href="mailto:unitetek@unite-tek.com.tw" class="text-secondary fs-3 social-icon" title="發送郵件">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
-    </footer>
+    </div>
+</footer>
+
+<style>
+    .social-icon {
+        transition: transform 0.2s, color 0.2s;
+    }
+    .social-icon:hover {
+        color: #003366 !important; /* 變成品牌藍色 */
+        transform: translateY(-3px); /* 稍微往上跳一下，比較動感 */
+    }
+</style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
