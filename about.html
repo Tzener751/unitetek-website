@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- 2. 修改：更專業且包含關鍵字的標題 (SEO 重點) -->
-    <title>聯絡我們 | 日將事業有限公司 UNITETEK - 無鹵阻燃劑、VGCF碳管專家</title>
+    <title>聯絡我們 | 日將事業有限公司 UNITETEK - 無鹵阻燃劑、VGCF碳管</title>
     
     <!-- 3. 新增：給 Google 機器人看的描述與關鍵字 -->
     <meta name="description" content="聯繫日將事業有限公司（UNITETEK）。我們提供專業的無鹵阻燃劑、VGCF碳管與化學材料諮詢。1995年成立，位於高雄鳳山，為您提供最高性價比的工業材料方案。">
@@ -33,6 +33,26 @@
         
         /* 針對表格的微調 */
         .table th { white-space: nowrap; }
+
+        /* --- 頁尾圖示專屬設計 --- */
+
+        /* 1. LINE 專屬綠色 */
+        .icon-line { color: #06C755 !important; }
+
+        /* 2. Email 專屬深藍色 (展現專業感) */
+        .icon-email { color: #004a99 !important; }
+
+        /* 3. 圖示共用特效：懸停時平滑放大並變亮 */
+        .social-icon {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s;
+            text-decoration: none;
+            display: inline-block; /* 必須加這行，動畫才會流暢 */
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2); /* 放大 1.2 倍 */
+            filter: brightness(1.1); /* 稍微變亮 */
+        }
     </style>
 </head>
 <body>
@@ -197,19 +217,13 @@
 
             <!-- 社群與聯繫圖示 -->
             <div class="d-flex justify-content-center gap-4">
-                <!-- LINE -->
-                <a href="https://line.me/ti/p/unitetek" target="_blank" class="text-secondary fs-3 social-icon" title="LINE">
+                <!-- LINE: 確保 class 有 icon-line -->
+                <a href="你的新LINE連結" target="_blank" class="fs-3 social-icon icon-line" title="LINE">
                     <i class="fab fa-line"></i>
                 </a>
                 
-                <!-- WeChat 
-                <a href="你的WeChat連結或二維碼頁面" target="_blank" class="text-secondary fs-3 social-icon" title="WeChat">
-                    <i class="fab fa-weixin"></i>
-                </a>
-                -->
-                
-                <!-- Email -->
-                <a href="mailto:unitetek@unite-tek.com.tw" class="text-secondary fs-3 social-icon" title="發送郵件">
+                <!-- Email: 確保 class 有 icon-email -->
+                <a href="mailto:unitetek@unite-tek.com.tw" class="fs-3 social-icon icon-email" title="發送郵件">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
