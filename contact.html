@@ -26,24 +26,33 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg main-nav bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="./static/logo.jpeg" alt="Logo" style="height:80px;">
-                <div class="ms-2 d-flex flex-column align-items-start">
-                    <div style="font-size: 1.7rem; line-height: 1.1; color: var(--brand-blue); font-weight: bold;">日將事業有限公司</div>
-                    <div style="font-size: 1.0rem; line-height: 1.1; letter-spacing: 0.5px; color: var(--brand-blue); margin-top: 2px; position: relative; left: 4px; font-weight: bold;">UNITETEK INTERNATIONAL CO., LTD.</div>
-                    <div style="font-size: 0.9rem; color: #000; line-height: 1.1; margin-top: 4px; position: relative; left: 4px;">無鹵阻燃劑 | 鹵素阻燃協效劑 | VGCF碳管 | 氮化鋁粉 | 熱電材料</div>
-                </div>
-            </a>
-            <div class="collapse navbar-collapse">
-                
+    <div class="container">
+        <!-- 左側 Logo 與公司名稱 -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="./static/logo.jpeg" alt="Logo" style="height:80px;">
+            <div class="ms-2 d-flex flex-column align-items-start">
+                <div style="font-size: 1.7rem; line-height: 1.1; color: var(--brand-blue); font-weight: bold;">日將事業有限公司</div>
+                <div style="font-size: 1.0rem; line-height: 1.1; letter-spacing: 0.5px; color: var(--brand-blue); margin-top: 2px; position: relative; left: 4px; font-weight: bold;">UNITETEK INTERNATIONAL CO., LTD.</div>
+                <div style="font-size: 0.9rem; color: #000; line-height: 1.1; margin-top: 4px; position: relative; left: 4px;">無鹵阻燃劑 | 鹵素阻燃協效劑 | VGCF碳管 | 氮化鋁粉 | 熱電材料</div>
+            </div>
+        </a>
+
+        <!-- 右側選單：使用 ms-auto 靠右，並確保 list-unstyled 移除黑點 -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- ms-auto 會將選單推至右側，list-unstyled 會移除所有黑點 -->
+            <ul class="navbar-nav ms-auto list-unstyled">
                 <li class="nav-item"><a class="nav-link" href="about.html">關於日將</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">聯絡我們</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">產業資訊</a></li>
-                
-            </div>
+                <!-- 如果你後來決定保留產業資訊，代碼如下。若不想要請整行刪除 -->
+                <li class="nav-item"><a class="nav-link" href="#">產業資訊</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <main>
         <div class="container py-5">
