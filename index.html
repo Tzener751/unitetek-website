@@ -33,7 +33,7 @@
 <body>
     <nav class="navbar navbar-expand-lg main-nav bg-white shadow-sm">
     <div class="container">
-        <!-- 左側 Logo 與公司名稱 -->
+        <!-- 左側 Logo 區塊 -->
         <a class="navbar-brand d-flex align-items-center" href="index.html">
             <img src="./static/logo.jpeg" alt="Logo" style="height:80px;">
             <div class="ms-2 d-flex flex-column align-items-start">
@@ -43,18 +43,11 @@
             </div>
         </a>
 
-        <!-- 右側選單：使用 ms-auto 靠右，並確保 list-unstyled 移除黑點 -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- ms-auto 會將選單推至右側，list-unstyled 會移除所有黑點 -->
-            <ul class="navbar-nav ms-auto list-unstyled">
-                <li class="nav-item"><a class="nav-link" href="about.html">關於日將</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">聯絡我們</a></li>
-                <!-- 如果你後來決定保留產業資訊，代碼如下。若不想要請整行刪除 -->
-                <li class="nav-item"><a class="nav-link" href="#">產業資訊</a></li>
+        <!-- 右側選單區塊 -->
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav" style="list-style: none; padding-left: 0;">
+                <li class="nav-item"><a class="nav-link text-brand-blue" href="about.html">關於日將</a></li>
+                <li class="nav-item"><a class="nav-link text-brand-blue" href="contact.html">聯絡我們</a></li>
             </ul>
         </div>
     </div>
