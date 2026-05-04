@@ -34,24 +34,30 @@
         .table th { white-space: nowrap; }
     </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg main-nav bg-white shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
-        <!-- 左側 Logo 區塊 -->
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="./static/logo.jpeg" alt="Logo" style="height:80px;">
-            <div class="ms-2 d-flex flex-column align-items-start">
-                <div style="font-size: 1.7rem; line-height: 1.1; color: var(--brand-blue); font-weight: bold;">日將事業有限公司</div>
-                <div style="font-size: 1.0rem; line-height: 1.1; letter-spacing: 0.5px; color: var(--brand-blue); margin-top: 2px; position: relative; left: 4px; font-weight: bold;">UNITETEK INTERNATIONAL CO., LTD.</div>
-                <div style="font-size: 0.9rem; color: #000; line-height: 1.1; margin-top: 4px; position: relative; left: 4px;">無鹵阻燃劑 | 鹵素阻燃協效劑 | VGCF碳管 | 氮化鋁粉 | 熱電材料</div>
-            </div>
+        <!-- 1. 公司 Logo/名稱 -->
+        <a class="navbar-brand fw-bold text-primary" href="index.html">
+            UNITETEK 日將事業
         </a>
 
-        <!-- 右側選單區塊：直接強制 Flex 佈局並置右 -->
-        <div class="collapse navbar-collapse d-flex justify-content-end">
-            <ul class="navbar-nav d-flex flex-row" style="list-style: none; padding-left: 0; margin-bottom: 0;">
-                <li class="nav-item ms-4"><a class="nav-link text-brand-blue" href="about.html">關於日將</a></li>
-                <li class="nav-item ms-4"><a class="nav-link text-brand-blue" href="contact.html">聯絡我們</a></li>
+        <!-- 2. 漢堡選單按鈕（手機版才會出現） -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 3. 選單內容：加上 collapse 讓它在手機版能收合 -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">關於我們</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">聯繫我們</a>
+                </li>
             </ul>
         </div>
     </div>
