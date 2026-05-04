@@ -97,8 +97,8 @@
         </div>
     </nav>
 
-<main class="bg-white"> <!-- 移除 bg-light，讓背景全白，視覺上更開闊 -->
-    <!-- 頂部切換選單 -->
+<main class="bg-white">
+    <!-- 頂部切換選單 (已固定在頂部) -->
     <div class="border-bottom sticky-top bg-white py-2" style="top: 70px; z-index: 1020;"> 
         <div class="container">
             <ul class="nav nav-pills nav-justified" id="productTab" role="tablist">
@@ -115,9 +115,8 @@
         </div>
     </div>
 
-    <!-- 產品內容區：移除 container 限制或使用 container-fluid 讓圖變大 -->
     <div class="tab-content mt-4" id="productTabContent">
-        <!-- VGCF 內容 -->
+        <!-- 產品 1: VGCF -->
         <div class="tab-pane fade show active" id="content-vgcf" role="tabpanel">
             <div class="container-fluid px-lg-5">
                 <div class="row align-items-center g-5">
@@ -130,19 +129,64 @@
                             <li>🔹 <strong>適用於能源、感知器、漿料等</strong></li>
                         </ul>
                         <div class="d-flex gap-3">
-                            <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5">立即詢價</a>
+                            <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5 shadow">立即詢價</a>
                             <a href="./static/pdf/product_vgcf_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">產品說明書</a>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <!-- 讓圖片撐滿剩餘空間 -->
+                    <div class="col-lg-8 text-center">
                         <img src="./static/product_vgcf.png" class="img-fluid w-100 rounded" style="max-height: 600px; object-fit: contain;">
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 其他產品內容區 (NAL, POC) 比照辦理... -->
+        <!-- 產品 2: UTFR-NAL -->
+        <div class="tab-pane fade" id="content-nal" role="tabpanel">
+            <div class="container-fluid px-lg-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-4">
+                        <h2 class="display-4 fw-bold text-success mb-4">UTFR-NAL 協效劑</h2>
+                        <ul class="list-unstyled h5 lh-lg mb-5">
+                            <li>✅ <strong>不含銻, 可替代三氧化二銻</strong></li>
+                            <li>✅ <strong>鹵素阻燃劑最好的搭配</strong></li>
+                            <li>✅ <strong>性價比高</strong></li>
+                            <li>✅ <strong>適用於加工溫度 < 250 ℃ 之橡塑膠</strong></li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <a href="contact.html" class="btn btn-success btn-lg rounded-pill px-5 shadow text-white">立即詢價</a>
+                            <a href="./static/pdf/product_NAL_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">產品說明書</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 text-center">
+                        <img src="./static/product_NAL.png" class="img-fluid w-100 rounded" style="max-height: 600px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 產品 3: UTFR-POC -->
+        <div class="tab-pane fade" id="content-poc" role="tabpanel">
+            <div class="container-fluid px-lg-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-4">
+                        <h2 class="display-4 fw-bold text-danger mb-4">UTFR-POC 無鹵阻燃</h2>
+                        <ul class="list-unstyled h5 lh-lg mb-5">
+                            <li>⭕ <strong>磷化合物為磷酸鹽類</strong></li>
+                            <li>⭕ <strong>磷氮型複合配方</strong></li>
+                            <li>⭕ <strong>加工溫度 < 230 ℃ 之橡塑膠</strong></li>
+                            <li>⭕ <strong>符合綠色環保規範</strong></li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <a href="contact.html" class="btn btn-danger btn-lg rounded-pill px-5 shadow">立即詢價</a>
+                            <a href="./static/pdf/product_POC_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">產品說明書</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 text-center">
+                        <img src="./static/product_POC.png" class="img-fluid w-100 rounded" style="max-height: 600px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
