@@ -1,102 +1,146 @@
-{% extends "base.html" %}
-
-{% block content %}
-<div class="container py-3">
-    <div class="row justify-content-center">
-        <div class="col-lg-10">
-            <!-- 標題 -->
-
-            <div class="row g-5">
-                <!-- 左側：聯絡資訊表格 -->
-                <div class="col-md-7">
-                    <h4 class="fw-bold mb-3">聯絡資訊</h4>
-                    <table class="table table-bordered align-middle shadow-sm">
-                        <tbody>
-                            <tr>
-                                <th class="bg-light w-25" style="color: #555;"><i class="bi bi-building me-2"></i>公司名稱</th>
-                                <td>日將事業有限公司 UNITETEK INTERNATIONAL CO., LTD</td>
-                            </tr>
-                            <tr>
-                                <th class="bg-light"><i class="bi bi-hash me-2"></i>統一編號</th>
-                                <td>89276141</td>
-                            </tr>
-                            <tr>
-                                <th class="bg-light"><i class="bi bi-person me-2"></i>聯絡人</th>
-                                <td>江猛榮</td>
-                            </tr>
-                            <tr>
-                                <th class="bg-light"><i class="bi bi-telephone me-2"></i>電話</th>
-                                <td>07-7965829</td>
-                            </tr>
-                            <tr>
-                                <th class="bg-light"><i class="bi bi-printer me-2"></i>傳真</th>
-                                <td>07-7965831</td>
-                            </tr>
-                            <tr>
-                                <th class="bg-light"><i class="bi bi-line me-2"></i>詢價 Line ID</th>
-                                <td>unitetek</td>
-                            </tr>
-                            <tr>
-                                <th class="bg-light"><i class="bi bi-wechat me-2"></i>Wechat ID</th>
-                                <td>unitetek</td>
-                            </tr>
-                            <tr>
-                                <th class="bg-light"><i class="bi bi-geo-alt me-2"></i>公司地址</th>
-                                <td>高雄市鳳山區和成路473號1F</td>
-                            </tr>
-                            <tr>
-                                <th class="bg-light"><i class="bi bi-envelope me-2"></i>e-mail</th>
-                                <td>
-                                    <!-- 使用 mailto: 讓電子郵件變成可點擊連結 -->
-                                    <!-- fw-bold 確保黑體效果，text-decoration-none 移除下劃線 -->
-                                    <a href="mailto:unitetek@unite-tek.com.tw" class="text-dark fw-bold text-decoration-none">
-                                        unitetek@unite-tek.com.tw
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-light"><i class="bi bi-briefcase me-2"></i>服務類別</th>
-                                <td>橡塑膠高分子、塗料/漿料、感知器/光電/能源產業</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div class="mt-4 p-3 bg-light rounded border">
-                        <h6 class="fw-bold"><i class="bi bi-info-circle me-2"></i>服務項目</h6>
-                        <p class="small text-muted mb-0">
-                            化學材料: 阻燃劑、無鹵阻燃劑、VGCF碳管、氮化鋁粉、散熱塑膠、熱電材料。
-                        </p>
-                    </div>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>聯絡我們 | 日將事業 UNITETEK</title>
+    <!-- 修正 Icon 與 CSS 路徑 -->
+    <link rel="icon" type="image/jpeg" href="./static/logo.jpeg?v=2">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root { --brand-blue: #007FFF; }
+        .main-nav .nav-link { 
+            color: var(--brand-blue) !important; 
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: all 0.2s; 
+        }
+        .main-nav .nav-link:hover { background-color: #f8f9fa; transform: translateY(-1px); }
+        .text-brand-blue { color: var(--brand-blue) !important; }
+        
+        /* 針對表格的微調 */
+        .table th { white-space: nowrap; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg main-nav bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./static/logo.jpeg" alt="Logo" style="height:80px;">
+                <div class="ms-2 d-flex flex-column align-items-start">
+                    <div style="font-size: 1.7rem; line-height: 1.1; color: var(--brand-blue); font-weight: bold;">日將事業有限公司</div>
+                    <div style="font-size: 1.0rem; line-height: 1.1; letter-spacing: 0.5px; color: var(--brand-blue); margin-top: 2px; position: relative; left: 4px; font-weight: bold;">UNITETEK INTERNATIONAL CO., LTD.</div>
+                    <div style="font-size: 0.9rem; color: #000; line-height: 1.1; margin-top: 4px; position: relative; left: 4px;">無鹵阻燃劑 | 鹵素阻燃協效劑 | VGCF碳管 | 氮化鋁粉 | 熱電材料</div>
                 </div>
+            </a>
+            <div class="collapse navbar-collapse">
+                
+                <li class="nav-item"><a class="nav-link" href="about.html">關於日將</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">聯絡我們</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">產業資訊</a></li>
+                
+            </div>
+        </div>
+    </nav>
 
-                <!-- 右側：地圖展示 -->
-                <!-- 右側：地圖展示 -->
-                <div class="col-md-5">
-                    <h4 class="fw-bold mb-3">公司位置</h4>
-                    <div class="card shadow-sm overflow-hidden" style="border-radius: 15px;">
-                        <!-- 修正後的 Google 地圖嵌入連結 -->
-                        <iframe src="https://maps.google.com/maps?q=高雄市鳳山區和成路473號&t=&z=17&ie=UTF8&iwloc=&output=embed" 
-                        width="100%" 
-                        height="400" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                        </iframe>
-                        <div class="card-body bg-white text-center">
-                            <!-- 這是按鈕跳轉連結，點擊後會開啟 Google Maps 導航 -->
-                            <a href="https://www.google.com/maps/search/?api=1&query=高雄市鳳山區和成路473號1F" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="bi bi-box-arrow-up-right me-1"></i> 在 Google 地圖中開啟
-                            </a>
+    <main>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row g-5">
+                        <!-- 左側：聯絡資訊表格 -->
+                        <div class="col-md-7">
+                            <h4 class="fw-bold mb-3">聯絡資訊</h4>
+                            <table class="table table-bordered align-middle shadow-sm">
+                                <tbody>
+                                    <tr>
+                                        <th class="bg-light w-25" style="color: #555;"><i class="bi bi-building me-2"></i>公司名稱</th>
+                                        <td>日將事業有限公司 UNITETEK INTERNATIONAL CO., LTD</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg-light"><i class="bi bi-hash me-2"></i>統一編號</th>
+                                        <td>89276141</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg-light"><i class="bi bi-person me-2"></i>聯絡人</th>
+                                        <td>江猛榮</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg-light"><i class="bi bi-telephone me-2"></i>電話</th>
+                                        <td>07-7965829</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg-light"><i class="bi bi-printer me-2"></i>傳真</th>
+                                        <td>07-7965831</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg-light"><i class="bi bi-line me-2"></i>詢價 Line ID</th>
+                                        <td>unitetek</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg-light"><i class="bi bi-wechat me-2"></i>Wechat ID</th>
+                                        <td>unitetek</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg-light"><i class="bi bi-geo-alt me-2"></i>公司地址</th>
+                                        <td>高雄市鳳山區和成路473號1F</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg-light"><i class="bi bi-envelope me-2"></i>e-mail</th>
+                                        <td>
+                                            <a href="mailto:unitetek@unite-tek.com.tw" class="text-dark fw-bold text-decoration-none">
+                                                unitetek@unite-tek.com.tw
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg-light"><i class="bi bi-briefcase me-2"></i>服務類別</th>
+                                        <td>橡塑膠高分子、塗料/漿料、感知器/光電/能源產業</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div class="mt-4 p-3 bg-light rounded border">
+                                <h6 class="fw-bold"><i class="bi bi-info-circle me-2"></i>服務項目</h6>
+                                <p class="small text-muted mb-0">
+                                    化學材料: 阻燃劑、無鹵阻燃劑、VGCF碳管、氮化鋁粉、散熱塑膠、熱電材料。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 右側：地圖展示 -->
+                        <div class="col-md-5">
+                            <h4 class="fw-bold mb-3">公司位置</h4>
+                            <div class="card shadow-sm overflow-hidden" style="border-radius: 15px;">
+                                <iframe src="https://maps.google.com/maps?q=高雄市鳳山區和成路473號&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                                </iframe>
+                                <div class="card-body bg-white text-center">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=高雄市鳳山區和成路473號1F" target="_blank" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-box-arrow-up-right me-1"></i> 在 Google 地圖中開啟
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            
         </div>
-    </div>
-</div>
+    </main>
 
-<!-- 引入 Bootstrap Icons (如果 base.html 沒引用的話) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-{% endblock %}
+    <footer class="py-4 bg-white border-top">
+        <div class="container text-center">
+            <p class="mb-0 fw-bold text-secondary" style="font-size: 1.5rem; letter-spacing: 0.5px;">
+                Copyright © 2026 日將事業有限公司 UNITETEK INTERNATIONAL CO., LTD. 保留所有權利.
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

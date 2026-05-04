@@ -1,118 +1,172 @@
-{% extends "base.html" %}
-
-{% block content %}
-<!-- 1. 發展核心 (圖卡區) -->
-<section class="py-5 bg-light">
-    <div class="container text-center">
-        <h2 class="mb-5 fw-bold display-6">發展核心</h2>
-        <div class="row g-4">
-            <!-- 阻燃劑 -->
-            <div class="col-md-6">
-                <div class="p-4 bg-white rounded shadow-sm h-100">
-                    <img src="{{ url_for('static', filename='icon_foundations.png') }}" class="mb-3" style="height: 120px;">
-                    <h4 class="fw-bold-custom text-brand-blue mb-3">阻燃劑開發</h4>
-                    <div class="text-dark fs-5 fw-bold text-center">
-                        <p class="mb-2">● UTFR-NAL 阻燃協效劑(<span class="text-danger">無銻</span>)</p>
-                        <p class="mb-0">● UTFR-POC-260R 無鹵阻燃劑</p>
-                    </div>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>關於日將 | 日將事業 UNITETEK</title>
+    <!-- 1. 修正 Icon 與 CSS 路徑 -->
+    <link rel="icon" type="image/jpeg" href="./static/logo.jpeg?v=2">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root { --brand-blue: #007FFF; }
+        .main-nav .nav-link { 
+            color: var(--brand-blue) !important; 
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: all 0.2s; 
+        }
+        .main-nav .nav-link:hover { background-color: #f8f9fa; transform: translateY(-1px); }
+        .text-brand-blue { color: var(--brand-blue) !important; }
+        .fw-bold-custom { font-weight: 700; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg main-nav bg-white shadow-sm">
+        <div class="container">
+            <!-- 2. 修正回首頁連結 -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./static/logo.jpeg" alt="Logo" style="height:80px;">
+                <div class="ms-2 d-flex flex-column align-items-start">
+                    <div style="font-size: 1.7rem; line-height: 1.1; color: var(--brand-blue); font-weight: bold;">日將事業有限公司</div>
+                    <div style="font-size: 1.0rem; line-height: 1.1; letter-spacing: 0.5px; color: var(--brand-blue); margin-top: 2px; position: relative; left: 4px; font-weight: bold;">UNITETEK INTERNATIONAL CO., LTD.</div>
+                    <div style="font-size: 0.9rem; color: #000; line-height: 1.1; margin-top: 4px; position: relative; left: 4px;">無鹵阻燃劑 | 鹵素阻燃協效劑 | VGCF碳管 | 氮化鋁粉 | 熱電材料</div>
                 </div>
-            </div>
-            <!-- 奈米碳管 -->
-            <div class="col-md-6">
-                <div class="p-4 bg-white rounded shadow-sm h-100">
-                    <img src="{{ url_for('static', filename='icon_eco.png') }}" class="mb-3" style="height: 120px;">
-                    <h4 class="fw-bold-custom text-brand-blue mb-3">VGCF 碳管</h4>
-                    <div class="text-dark fs-5 fw-bold text-start">
-                        <p class="lh-base mb-0">採用浮動式氣相成長法與高溫石墨化處理，提供超高純度與極佳電化學活性，專為鋰電池與精密電子產業設計。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 2. 產品技術規格區 (老闆要求的細節都在這) -->
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <h3 class="mb-4 border-start border-4 ps-3 fw-bold text-brand-blue" style="border-color: var(--brand-blue) !important;">產品規格</h3>
+            </a>
+            <div class="collapse navbar-collapse">
                 
-                <!-- 阻燃劑細節 -->
-                <div class="mb-5">
-                    <h5 class="fw-bold text-dark mb-3"><i class="bi bi-shield-check me-2"></i>專業阻燃方案</h5>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="p-3 border rounded-3 bg-light h-100">
-                                <h6 class="fs-3 fw-bold text-danger">UTFR-NAL (無銻協效劑)</h6>
-                                <ul class="fs-5 fw-bold text-dark mt-2 lh-lg">
-                                    <li>替代三氧化二銻，阻燃效力高</li>
-                                    <li>鹵素阻燃劑最佳搭配</li>
-                                    <li>耐溫性：適用加工溫度 < 250℃</li>
-                                    <li>UL <span class="text-danger">無銻</span>認證首選方案</li>
-                                </ul>
+                <li class="nav-item"><a class="nav-link" href="about.html">關於日將</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">聯絡我們</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">產業資訊</a></li>
+                
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 1. 發展核心 (圖卡區) -->
+        <section class="py-5 bg-light">
+            <div class="container text-center">
+                <h2 class="mb-5 fw-bold display-6">發展核心</h2>
+                <div class="row g-4">
+                    <!-- 阻燃劑 -->
+                    <div class="col-md-6">
+                        <div class="p-4 bg-white rounded shadow-sm h-100">
+                            <!-- 3. 修正圖片路徑 -->
+                            <img src="./static/icon_foundations.png" class="mb-3" style="height: 120px;">
+                            <h4 class="fw-bold-custom text-brand-blue mb-3">阻燃劑開發</h4>
+                            <div class="text-dark fs-5 fw-bold text-center">
+                                <p class="mb-2">● UTFR-NAL 阻燃協效劑(<span class="text-danger">無銻</span>)</p>
+                                <p class="mb-0">● UTFR-POC-260R 無鹵阻燃劑</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="p-3 border rounded-3 bg-light h-100">
-                                <!-- <h6 class=" fs-3 fw-bold style="color: green !important;>UTFR-POC-260R (無鹵)</h6> -->
-                                <h6 class="fs-3 fw-bold text-success">
-                                    <span style="color: #00A600 !important;">
-                                        UTFR-POC-260R (無鹵)
-                                    </span>
-                                </h6>
-                                <ul class="fs-5 fw-bold text-dark mt-2 lh-lg">
-                                    <li>磷酸鹽類 / 磷氮型複合配方</li>
-                                    <li>高性價比、滿足市場主流需求</li>
-                                    <li>耐溫性：適用加工溫度 < 230℃</li>
-                                    <li>符合現代環保與無鹵法規趨勢</li>
-                                </ul>
+                    </div>
+                    <!-- 奈米碳管 -->
+                    <div class="col-md-6">
+                        <div class="p-4 bg-white rounded shadow-sm h-100">
+                            <!-- 3. 修正圖片路徑 -->
+                            <img src="./static/icon_eco.png" class="mb-3" style="height: 120px;">
+                            <h4 class="fw-bold-custom text-brand-blue mb-3">VGCF 碳管</h4>
+                            <div class="text-dark fs-5 fw-bold text-start">
+                                <p class="lh-base mb-0">採用浮動式氣相成長法與高溫石墨化處理，提供超高純度與極佳電化學活性，專為鋰電池與精密電子產業設計。</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- VGCF 規格表 (表格呈現最專業) -->
-                <div class="mb-5">
-                    <h5 class="fw-bold text-dark mb-3"><i class="bi bi-cpu me-2"></i>VGCF 物理性質參數表</h5>
-                    <div class="table-responsive">
-                        <table class="table table-bordered align-middle fw-bold text-dark">
-                            <thead class="table-light">
-                                <tr>
-                                    <th style="width: 30%;">項目</th>
-                                    <th>規格參數</th>
+        <!-- 2. 產品技術規格區 -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h3 class="mb-4 border-start border-4 ps-3 fw-bold text-brand-blue" style="border-color: var(--brand-blue) !important;">產品規格</h3>
+                        
+                        <!-- 阻燃劑細節 -->
+                        <div class="mb-5">
+                            <h5 class="fw-bold text-dark mb-3"><i class="bi bi-shield-check me-2"></i>專業阻燃方案</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-3 bg-light h-100">
+                                        <h6 class="fs-3 fw-bold text-danger">UTFR-NAL (無銻協效劑)</h6>
+                                        <ul class="fs-5 fw-bold text-dark mt-2 lh-lg">
+                                            <li>替代三氧化二銻，阻燃效力高</li>
+                                            <li>鹵素阻燃劑最佳搭配</li>
+                                            <li>耐溫性：適用加工溫度 < 250℃</li>
+                                            <li>UL <span class="text-danger">無銻</span>認證首選方案</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-3 bg-light h-100">
+                                        <h6 class="fs-3 fw-bold" style="color: #00A600 !important;">UTFR-POC-260R (無鹵)</h6>
+                                        <ul class="fs-5 fw-bold text-dark mt-2 lh-lg">
+                                            <li>磷酸鹽類 / 磷氮型複合配方</li>
+                                            <li>高性價比、滿足市場主流需求</li>
+                                            <li>耐溫性：適用加工溫度 < 230℃</li>
+                                            <li>符合現代環保與無鹵法規趨勢</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VGCF 規格表 -->
+                        <div class="mb-5">
+                            <h5 class="fw-bold text-dark mb-3"><i class="bi bi-cpu me-2"></i>VGCF 物理性質參數表</h5>
+                            <div class="table-responsive">
+                                <table class="table table-bordered align-middle fw-bold text-dark">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th style="width: 30%;">項目</th>
+                                            <th>規格參數</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>微結構</td><td>洋蔥式多管壁 (Multi-walled)</td></tr>
+                                        <tr><td>直徑/管徑</td><td>7 微米 / 110 奈米</td></tr>
+                                        <tr><td>長徑比</td><td>10 ~ 500</td></tr>
+                                        <tr><td>導熱係數 (K)</td><td class="text-primary">＞ 1600 W/m-k</td></tr>
+                                        <tr><td>導電係數 (ρ)</td><td>6 × 10⁻⁷ Ω.m</td></tr>
+                                        <tr><td>石墨化程度</td><td>＞ 80%</td></tr>
+                                        <tr><td>耐熱氧化溫度</td><td>＞ 700℃</td></tr>
+                                    </tbody>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>微結構</td><td>洋蔥式多管壁 (Multi-walled)</td></tr>
-                                <tr><td>直徑/管徑</td><td>7 微米 / 110 奈米</td></tr>
-                                <tr><td>長徑比</td><td>10 ~ 500</td></tr>
-                                <tr><td>導熱係數 (K)</td><td class="text-primary">＞ 1600 W/m-k</td></tr>
-                                <tr><td>導電係數 (ρ)</td><td>6 × 10⁻⁷ Ω.m</td></tr>
-                                <tr><td>石墨化程度</td><td>＞ 80%</td></tr>
-                                <tr><td>耐熱氧化溫度</td><td>＞ 700℃</td></tr>
-                            </tbody>
-                        </table>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- 3. 公司簡介 -->
-<section class="py-5 bg-light border-top">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <h3 class="mb-4 border-start border-4 ps-3 fw-bold text-brand-blue" style="border-color: var(--brand-blue) !important;">關於日將</h3>
-                <div class="lh-lg text-dark fs-5 fw-bold">
-                    <p>日將事業有限公司成立於 1995 年 1 月。從早期代理化學分析儀器開始，隨後跨足化工環保設備，現已發展為專注於高品質化學材料開發的專業廠商。</p>
-                    <p>化學材料領域如浩瀚海洋般深邃廣闊，我們深知在無止盡的技術追求中，「高性價比」才是市場的主流與企業的生存之道。</p>
-                    <p>針對 PVC 等材料，我們開發出的 <strong class="text-danger">NAL 環保材質</strong> 已成為業界取代三氧化二銻的領先材料，目前主要客戶為電線電纜業、橡膠業與ABS塑膠。</p>
+        <!-- 3. 公司簡介 -->
+        <section class="py-5 bg-light border-top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h3 class="mb-4 border-start border-4 ps-3 fw-bold text-brand-blue" style="border-color: var(--brand-blue) !important;">關於日將</h3>
+                        <div class="lh-lg text-dark fs-5 fw-bold">
+                            <p>日將事業有限公司成立於 1995 年 1 月。從早期代理化學分析儀器開始，隨後跨足化工環保設備，現已發展為專注於高品質化學材料開發的專業廠商。</p>
+                            <p>化學材料領域如浩瀚海洋般深邃廣闊，我們深知在無止盡的技術追求中，「高性價比」才是市場的主流與企業的生存之道。</p>
+                            <p>針對 PVC 等材料，我們開發出的 <strong class="text-danger">NAL 環保材質</strong> 已成為業界取代三氧化二銻的領先材料，目前主要客戶為電線電纜業、橡膠業與ABS塑膠。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="py-4 bg-white border-top">
+        <div class="container text-center">
+            <p class="mb-0 fw-bold text-secondary" style="font-size: 1.5rem; letter-spacing: 0.5px;">
+                Copyright © 2026 日將事業有限公司 UNITETEK INTERNATIONAL CO., LTD. 保留所有權利.
+            </p>
         </div>
-    </div>
-</section>
-{% endblock %}
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
