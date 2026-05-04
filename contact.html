@@ -34,37 +34,38 @@
         .table th { white-space: nowrap; }
     </style>
 </head>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-        <div class="container">
-            <!-- 1. Logo 區塊 (確保這行在最前面) -->
-            <a class="navbar-brand fw-bold text-primary" href="index.html">
-                <!-- 如果是文字 Logo -->
-                UNITETEK 日將事業
-                <!-- 如果是用圖片 Logo，請用下方這行 -->
-                <!-- <img src="./static/logo.png" alt="Logo" height="40"> -->
-            </a>
-
-            <!-- 2. 漢堡選單按鈕 (手機版專用) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- 3. 選單內容 (手機版會收合) -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">首頁</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">關於我們</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">聯繫我們</a>
-                    </li>
-                </ul>
+<body>
+    <nav class="navbar navbar-expand-lg main-nav bg-white shadow-sm sticky-top">
+    <div class="container">
+        <!-- 左側 Logo 區塊 -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="./static/logo.jpeg" alt="Logo" style="height:60px;"> <!-- 手機版建議高度稍微調小一點點 -->
+            <div class="ms-2 d-flex flex-column align-items-start">
+                <div style="font-size: 1.4rem; line-height: 1.1; color: #003366; font-weight: bold;">日將事業有限公司</div>
+                <div style="font-size: 0.8rem; line-height: 1.1; letter-spacing: 0.5px; color: #003366; margin-top: 2px; font-weight: bold;">UNITETEK INTERNATIONAL CO., LTD.</div>
+                <!-- 第三行介紹在手機版建議隱藏，避免太擠，加上 d-none d-lg-block -->
+                <div class="d-none d-lg-block" style="font-size: 0.8rem; color: #000; line-height: 1.1; margin-top: 4px;">無鹵阻燃劑 | 鹵素阻燃協效劑 | VGCF碳管 | 氮化鋁粉 | 熱電材料</div>
             </div>
+        </a>
+
+        <!-- 1. 新增：漢堡選單按鈕（手機版才會出現） -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 2. 右側選單區塊：移除 d-flex，改用標準 Bootstrap 收合 class -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item ms-lg-4">
+                    <a class="nav-link text-brand-blue fw-bold" href="about.html">關於日將</a>
+                </li>
+                <li class="nav-item ms-lg-4">
+                    <a class="nav-link text-brand-blue fw-bold" href="contact.html">聯絡我們</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <main>
         <div class="container py-5">
