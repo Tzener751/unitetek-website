@@ -45,5 +45,4 @@ def product_nal():
                            pdf_file="pdf/product_NAL.pdf")
 
 if __name__ == '__main__':
-    # 這裡維持你原本能跑的 Port 5502
     app.run(debug=True, port=5502)

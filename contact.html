@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="7bcf86ca3785c576" />
-    <!-- 1. 新增：確保手機版縮放正常 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 2. 修改：更專業且包含關鍵字的標題 (SEO 重點) -->
     <title>日將事業有限公司 UNITETEK - 三氧化二銻替代品、無鹵阻燃劑、VGCF碳管、NAL無銻阻燃協效劑</title>
-    
-    <!-- 3. 新增：給 Google 機器人看的描述與關鍵字 -->
     <meta name="description" content="聯繫日將事業有限公司（UNITETEK）。我們提供專業的無鹵阻燃劑、VGCF碳管與化學材料諮詢。1995年成立，位於高雄鳳山，為您提供最高性價比的工業材料方案。">
     <meta name="keywords" content="日將事業, UNITETEK, 聯絡日將, 無鹵阻燃劑, NAL, VGCF碳管, 鳳山化學材料, 阻燃劑供應商">
 
-    <!-- 原本的 Icon 與 CSS 路徑 (保留) -->
     <link rel="icon" type="image/jpeg" href="./static/logo.jpeg?v=2">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- 新增這行，才能顯示 LINE, WeChat 和 Email 的圖示 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <style>
         :root { --brand-blue: #007FFF; }
         .main-nav .nav-link { 
@@ -31,75 +25,49 @@
         }
         .main-nav .nav-link:hover { background-color: #f8f9fa; transform: translateY(-1px); }
         .text-brand-blue { color: var(--brand-blue) !important; }
-        
-        /* 針對表格的微調 */
         .table th { white-space: nowrap; }
-
-        /* --- 頁尾圖示專屬設計 --- */
-
-        /* 1. LINE 專屬綠色 */
         .icon-line { color: #06C755 !important; }
-
-        /* 2. Email 專屬深藍色 (展現專業感) */
         .icon-email { color: #004a99 !important; }
-
-        /* 3. 圖示共用特效：懸停時平滑放大並變亮 */
         .social-icon {
             transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s;
             text-decoration: none;
-            display: inline-block; /* 必須加這行，動畫才會流暢 */
+            display: inline-block;
         }
-
         .social-icon:hover {
-            transform: scale(1.2); /* 放大 1.2 倍 */
-            filter: brightness(1.1); /* 稍微變亮 */
+            transform: scale(1.2) translateY(-3px);
+            filter: brightness(1.1);
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg main-nav bg-white shadow-sm sticky-top">
-    <div class="container">
-        <!-- 左側 Logo 區塊 -->
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <!-- 手機版調整高度至 60px 避免過大 -->
-            <img src="./static/logo.jpeg" alt="Logo" style="height:60px;"> 
-            <div class="ms-2 d-flex flex-column align-items-start">
-                <div style="font-size: 1.4rem; line-height: 1.1; color: #003366; font-weight: bold;">日將事業有限公司</div>
-                <div style="font-size: 0.8rem; line-height: 1.1; letter-spacing: 0.5px; color: #003366; margin-top: 2px; font-weight: bold;">UNITETEK INTERNATIONAL CO., LTD.</div>
-                <!-- 這一行產品介紹在手機版會自動隱藏 (d-none d-lg-block)，保持畫面簡潔 -->
-                <div class="d-none d-lg-block" style="font-size: 0.8rem; color: #000; line-height: 1.1; margin-top: 4px;">無鹵阻燃劑 | 鹵素阻燃協效劑 | VGCF碳管 | 氮化鋁粉 | 熱電材料</div>
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./static/logo.jpeg" alt="Logo" style="height:60px;"> 
+                <div class="ms-2 d-flex flex-column align-items-start">
+                    <div style="font-size: 1.4rem; line-height: 1.1; color: #003366; font-weight: bold;">日將事業有限公司</div>
+                    <div style="font-size: 0.8rem; line-height: 1.1; letter-spacing: 0.5px; color: #003366; margin-top: 2px; font-weight: bold;">UNITETEK INTERNATIONAL CO., LTD.</div>
+                    <div class="d-none d-lg-block" style="font-size: 0.8rem; color: #000; line-height: 1.1; margin-top: 4px;">無鹵阻燃劑 | 鹵素阻燃協效劑 | VGCF碳管 | 氮化鋁粉 | 熱電材料</div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item ms-lg-4"><a class="nav-link text-brand-blue fw-bold" href="index.html">首頁</a></li>
+                    <li class="nav-item ms-lg-4"><a class="nav-link text-brand-blue fw-bold" href="about.html">關於日將</a></li>
+                    <li class="nav-item ms-lg-4"><a class="nav-link text-brand-blue fw-bold" href="contact.html">聯絡我們</a></li>
+                </ul>
             </div>
-        </a>
-
-        <!-- 1. 漢堡選單按鈕 (手機版專用) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- 2. 選單區塊：包含首頁、關於、聯絡我們 -->
-        <div class="collapse navbar-collapse" id="mainNavbar">
-            <!-- ms-auto 會把選單推向右邊 -->
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item ms-lg-4">
-                    <a class="nav-link text-brand-blue fw-bold" href="index.html">首頁</a>
-                </li>
-                <li class="nav-item ms-lg-4">
-                    <a class="nav-link text-brand-blue fw-bold" href="about.html">關於日將</a>
-                </li>
-                <li class="nav-item ms-lg-4">
-                    <a class="nav-link text-brand-blue fw-bold" href="contact.html">聯絡我們</a>
-                </li>
-            </ul>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <main>
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="row g-5">
-                        <!-- 左側：聯絡資訊表格 -->
                         <div class="col-md-7">
                             <h4 class="fw-bold mb-3">聯絡資訊</h4>
                             <table class="table table-bordered align-middle shadow-sm">
@@ -108,68 +76,30 @@
                                         <th class="bg-light w-25" style="color: #555;"><i class="bi bi-building me-2"></i>公司名稱</th>
                                         <td>日將事業有限公司 UNITETEK INTERNATIONAL CO., LTD</td>
                                     </tr>
-                                    <tr>
-                                        <th class="bg-light"><i class="bi bi-hash me-2"></i>統一編號</th>
-                                        <td>89276141</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-light"><i class="bi bi-person me-2"></i>聯絡人</th>
-                                        <td>江猛榮</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-light"><i class="bi bi-telephone me-2"></i>電話</th>
-                                        <td>07-7965829</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-light"><i class="bi bi-printer me-2"></i>傳真</th>
-                                        <td>07-7965831</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-light"><i class="bi bi-line me-2"></i>詢價 Line ID</th>
-                                        <td>unitetek</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-light"><i class="bi bi-wechat me-2"></i>Wechat ID</th>
-                                        <td>unitetek</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="bg-light"><i class="bi bi-geo-alt me-2"></i>公司地址</th>
-                                        <td>高雄市鳳山區和成路473號1F</td>
-                                    </tr>
+                                    <tr><th class="bg-light"><i class="bi bi-hash me-2"></i>統一編號</th><td>89276141</td></tr>
+                                    <tr><th class="bg-light"><i class="bi bi-person me-2"></i>聯絡人</th><td>江猛榮</td></tr>
+                                    <tr><th class="bg-light"><i class="bi bi-telephone me-2"></i>電話</th><td>07-7965829</td></tr>
+                                    <tr><th class="bg-light"><i class="bi bi-printer me-2"></i>傳真</th><td>07-7965831</td></tr>
+                                    <tr><th class="bg-light"><i class="bi bi-line me-2"></i>Line ID</th><td>unitetek</td></tr>
+                                    <tr><th class="bg-light"><i class="bi bi-wechat me-2"></i>Wechat ID</th><td>unitetek</td></tr>
+                                    <tr><th class="bg-light"><i class="bi bi-geo-alt me-2"></i>公司地址</th><td>高雄市鳳山區和成路473號1F</td></tr>
                                     <tr>
                                         <th class="bg-light"><i class="bi bi-envelope me-2"></i>e-mail</th>
-                                        <td>
-                                            <a href="mailto:unitetek@unite-tek.com.tw" class="text-dark fw-bold text-decoration-none">
-                                                unitetek@unite-tek.com.tw
-                                            </a>
-                                        </td>
+                                        <td><a href="mailto:unitetek@unite-tek.com.tw" class="text-dark fw-bold text-decoration-none">unitetek@unite-tek.com.tw</a></td>
                                     </tr>
-                                    <tr>
-                                        <th class="bg-light"><i class="bi bi-briefcase me-2"></i>服務類別</th>
-                                        <td>橡塑膠高分子、塗料/漿料、感知器/光電/能源產業</td>
-                                    </tr>
+                                    <tr><th class="bg-light"><i class="bi bi-briefcase me-2"></i>服務類別</th><td>橡塑膠高分子、塗料/漿料、感知器/光電/能源產業</td></tr>
                                 </tbody>
                             </table>
-                            
                             <div class="mt-4 p-3 bg-light rounded border">
                                 <h6 class="fw-bold"><i class="bi bi-info-circle me-2"></i>服務項目</h6>
-                                <p class="small text-muted mb-0">
-                                    化學材料: 阻燃劑、無鹵阻燃劑、VGCF碳管、氮化鋁粉、散熱塑膠、熱電材料。
-                                </p>
+                                <p class="small text-muted mb-0">化學材料: 阻燃劑、無鹵阻燃劑、VGCF碳管、氮化鋁粉、散熱塑膠、熱電材料。</p>
                             </div>
                         </div>
 
-                        <!-- 右側：地圖展示 -->
                         <div class="col-md-5">
                             <h4 class="fw-bold mb-3">公司位置</h4>
                             <div class="card shadow-sm overflow-hidden" style="border-radius: 15px;">
-                                <iframe src="https://maps.google.com/maps?q=高雄市鳳山區和成路473號&t=&z=17&ie=UTF8&iwloc=&output=embed" 
-                                width="100%" 
-                                height="400" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy">
-                                </iframe>
+                                <iframe src="https://maps.google.com/maps?q=高雄市鳳山區和成路473號&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                 <div class="card-body bg-white text-center">
                                     <a href="https://www.google.com/maps/search/?api=1&query=高雄市鳳山區和成路473號1F" target="_blank" class="btn btn-outline-primary btn-sm">
                                         <i class="bi bi-box-arrow-up-right me-1"></i> 在 Google 地圖中開啟
@@ -184,36 +114,15 @@
     </main>
 
     <footer class="py-4 bg-light border-top">
-    <div class="container text-center">
-        <!-- 版權宣告文字 -->
-        <p class="text-secondary mb-3">
-            Copyright © 2026 日將事業有限公司 UNITETEK INTERNATIONAL CO., LTD. 保留所有權利。
-        </p>
-
-        <!-- 社群與聯繫圖示 -->
-        <div class="d-flex justify-content-center gap-4">
-            <!-- LINE: 確保 class 有 icon-line -->
-            <a href="你的新LINE連結" target="_blank" class="fs-3 social-icon icon-line" title="LINE">
-                <i class="fab fa-line"></i>
-            </a>
-            
-            <!-- Email: 確保 class 有 icon-email -->
-            <a href="mailto:unitetek@unite-tek.com.tw" class="fs-3 social-icon icon-email" title="發送郵件">
-                <i class="fas fa-envelope"></i>
-            </a>
+        <div class="container text-center">
+            <p class="text-secondary mb-3">Copyright © 2026 日將事業有限公司 UNITETEK INTERNATIONAL CO., LTD. 保留所有權利。</p>
+            <div class="d-flex justify-content-center gap-4">
+                <a href="https://line.me/ti/p/~unitetek" target="_blank" class="fs-3 social-icon icon-line" title="LINE"><i class="fab fa-line"></i></a>
+                <a href="mailto:unitetek@unite-tek.com.tw" class="fs-3 social-icon icon-email" title="發送郵件"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<style>
-    .social-icon {
-        transition: transform 0.2s, color 0.2s;
-    }
-    .social-icon:hover {
-        color: #003366 !important; /* 變成品牌藍色 */
-        transform: translateY(-3px); /* 稍微往上跳一下，比較動感 */
-    }
-</style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
