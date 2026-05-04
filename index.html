@@ -84,97 +84,57 @@
         </div>
     </nav>
 
-    <main class="py-5 bg-light" style="min-height: 600px;">
-        <div class="container bg-white shadow-sm rounded-4 overflow-hidden">
+    <!-- py-3 縮小了頁面頂部與導覽列的距離 -->
+<main class="py-3 bg-light">
+    <div class="container-fluid px-lg-5"> 
+        <div class="bg-white shadow-sm rounded-4 overflow-hidden">
             <div class="row g-0">
-                <div class="col-md-3 bg-light border-end">
+                <!-- 左側選單 -->
+                <div class="col-md-2 bg-light border-end">
                     <div class="list-group list-group-flush" id="productTab" role="tablist">
-                        <button class="list-group-item list-group-item-action active py-4 border-0" id="tab-vgcf" data-bs-toggle="pill" data-bs-target="#content-vgcf" type="button" role="tab">
-                            <i class="bi bi-cpu-fill me-2"></i> VGCF 碳管
+                        <!-- py-3 讓選單按鈕變矮一點 -->
+                        <button class="list-group-item list-group-item-action active py-3 border-0" id="tab-vgcf" data-bs-toggle="pill" data-bs-target="#content-vgcf" type="button" role="tab">
+                            VGCF 碳管
                         </button>
-                        <button class="list-group-item list-group-item-action py-4 border-0" id="tab-nal" data-bs-toggle="pill" data-bs-target="#content-nal" type="button" role="tab">
-                            <i class="bi bi-shield-check me-2"></i> UTFR-NAL 協效劑
+                        <button class="list-group-item list-group-item-action py-3 border-0" id="tab-nal" data-bs-toggle="pill" data-bs-target="#content-nal" type="button" role="tab">
+                            UTFR-NAL
                         </button>
-                        <button class="list-group-item list-group-item-action py-4 border-0" id="tab-poc" data-bs-toggle="pill" data-bs-target="#content-poc" type="button" role="tab">
-                            <i class="bi bi-droplet-fill me-2"></i> UTFR-POC 無鹵阻燃
+                        <button class="list-group-item list-group-item-action py-3 border-0" id="tab-poc" data-bs-toggle="pill" data-bs-target="#content-poc" type="button" role="tab">
+                            UTFR-POC
                         </button>
                     </div>
                 </div>
 
-                <div class="col-md-9 p-4 p-lg-5">
+                <!-- 右側內容區：p-3 縮小了內距，讓圖表能往外擴展 -->
+                <div class="col-md-10 p-3 p-lg-4">
                     <div class="tab-content" id="productTabContent">
-                        
-                        <!-- 產品 1: VGCF -->
-                        <div class="tab-pane fade show active" id="content-vgcf" role="tabpanel">
+                        <div class="tab-pane fade show active" id="content-poc" role="tabpanel">
                             <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <h2 class="display-6 fw-bold text-primary mb-4">VGCF 碳管</h2>
-                                    <ul class="list-unstyled h5 lh-lg mb-4">
-                                        <li>🔹 <strong>浮動式氣相成長工藝</strong></li>
-                                        <li>🔹 <strong>高溫石墨化處理</strong></li>
-                                        <li>🔹 <strong>長度7微米 / 管徑110奈米</strong></li>
-                                        <li>🔹 <strong>適用於能源、感知器、漿料等</strong></li>
+                                <div class="col-xl-4 col-lg-5">
+                                    <h2 class="fw-bold text-danger mb-3">UTFR-POC 無鹵阻燃</h2>
+                                    <ul class="list-unstyled h6 lh-base mb-4">
+                                        <li>⭕ 磷氮型複合配方</li>
+                                        <li>⭕ 加工溫度 < 230 °C</li>
+                                        <li>⭕ 符合環保法規</li>
+                                        <li>⭕ 廣泛應用於橡塑膠</li>
                                     </ul>
                                     <div class="d-flex gap-2">
-                                        <a href="contact.html" class="btn btn-primary rounded-pill px-4">詢價</a>
-                                        <a href="./static/pdf/product_vgcf_020526.pdf" target="_blank" class="btn btn-outline-dark rounded-pill px-4">說明書</a>
+                                        <a href="contact.html" class="btn btn-danger btn-sm rounded-pill px-4">詢價</a>
+                                        <a href="./static/pdf/product_POC_020526.pdf" target="_blank" class="btn btn-outline-dark btn-sm rounded-pill px-3">說明書</a>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                                    <img src="./static/product_vgcf.png" class="img-fluid rounded" style="max-height: 350px;">
+                                <!-- 圖片區：移除額外的內距，讓圖表盡可能撐大 -->
+                                <div class="col-xl-8 col-lg-7 text-center">
+                                    <img src="./static/product_POC.png" class="img-fluid w-100" style="max-height: 500px; object-fit: contain;">
                                 </div>
                             </div>
                         </div>
-
-                        <!-- 產品 2: NAL -->
-                        <div class="tab-pane fade" id="content-nal" role="tabpanel">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <h2 class="display-6 fw-bold text-success mb-4">UTFR-NAL 協效劑</h2>
-                                    <ul class="list-unstyled h5 lh-lg mb-4">
-                                        <li>✅ <strong>可替代三氧化二銻</strong></li>
-                                        <li>✅ <strong>鹵素阻燃劑最佳搭檔</strong></li>
-                                        <li>✅ <strong>加工溫度 < 250 ℃</strong></li>
-                                        <li>✅ <strong>高性價比方案</strong></li>
-                                    </ul>
-                                    <div class="d-flex gap-2">
-                                        <a href="contact.html" class="btn btn-success rounded-pill px-4 text-white">詢價</a>
-                                        <a href="./static/pdf/product_NAL_020526.pdf" target="_blank" class="btn btn-outline-dark rounded-pill px-4">說明書</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                                    <img src="./static/product_NAL.png" class="img-fluid rounded" style="max-height: 350px;">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 產品 3: POC -->
-                        <div class="tab-pane fade" id="content-poc" role="tabpanel">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <h2 class="display-6 fw-bold text-danger mb-4">UTFR-POC 無鹵阻燃</h2>
-                                    <ul class="list-unstyled h5 lh-lg mb-4">
-                                        <li>⭕ <strong>磷氮型複合配方</strong></li>
-                                        <li>⭕ <strong>加工溫度 < 230 ℃</strong></li>
-                                        <li>⭕ <strong>符合環保法規</strong></li>
-                                        <li>⭕ <strong>廣泛應用於橡塑膠</strong></li>
-                                    </ul>
-                                    <div class="d-flex gap-2">
-                                        <a href="contact.html" class="btn btn-danger rounded-pill px-4">詢價</a>
-                                        <a href="./static/pdf/product_POC_020526.pdf" target="_blank" class="btn btn-outline-dark rounded-pill px-4">說明書</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                                    <img src="./static/product_POC.png" class="img-fluid rounded" style="max-height: 350px;">
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 
     <footer class="py-4 bg-light border-top">
         <div class="container text-center">
