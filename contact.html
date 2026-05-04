@@ -34,34 +34,37 @@
         .table th { white-space: nowrap; }
     </style>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-    <div class="container">
-        <!-- 1. 公司 Logo/名稱 -->
-        <a class="navbar-brand fw-bold text-primary" href="index.html">
-            UNITETEK 日將事業
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <!-- 1. Logo 區塊 (確保這行在最前面) -->
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <!-- 如果是文字 Logo -->
+                UNITETEK 日將事業
+                <!-- 如果是用圖片 Logo，請用下方這行 -->
+                <!-- <img src="./static/logo.png" alt="Logo" height="40"> -->
+            </a>
 
-        <!-- 2. 漢堡選單按鈕（手機版才會出現） -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- 2. 漢堡選單按鈕 (手機版專用) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- 3. 選單內容：加上 collapse 讓它在手機版能收合 -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">首頁</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">關於我們</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">聯繫我們</a>
-                </li>
-            </ul>
+            <!-- 3. 選單內容 (手機版會收合) -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">關於我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯繫我們</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <main>
         <div class="container py-5">
