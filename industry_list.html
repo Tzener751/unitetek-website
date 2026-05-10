@@ -6,54 +6,77 @@
     <title>產業資訊 | 日將事業</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* 導覽列文字顏色 */
-        .nav-link { color: #4A90E2 !important; font-weight: bold; font-size: 1.2rem; }
+        /* 導覽列文字顏色與大小，仿照圖片中的大字體 */
+        .nav-link { 
+            color: #4A90E2 !important; 
+            font-weight: bold; 
+            font-size: 1.5rem; /* 加大文字 */
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+        
+        /* 公司名稱與標語的細節調整 */
+        .company-name { font-size: 1.8rem; color: #003366; font-weight: bold; line-height: 1.2; }
+        .company-eng { font-size: 1.1rem; color: #003366; font-weight: bold; line-height: 1.2; }
+        .company-slogan { font-size: 1rem; color: #000; margin-top: 5px; }
+
         /* 新聞列表樣式 */
         .news-item {
             background-color: #f5f5f5;
             margin-bottom: 10px;
             display: flex;
             align-items: center;
-            padding: 15px;
+            padding: 20px;
             text-decoration: none;
             color: inherit;
+            border-radius: 4px;
         }
         .news-item:hover { background-color: #ededed; }
-        .img-placeholder { width: 120px; height: 80px; background: #ddd; margin-right: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #666; }
+        .img-placeholder { width: 150px; height: 100px; background: #ddd; margin-right: 25px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: #666; border: 1px solid #ccc; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="./static/logo.jpeg" alt="Logo" style="height:50px;">
-                <div class="ms-2">
-                    <div style="font-size: 1.2rem; color: #003366; font-weight: bold;">日將事業有限公司</div>
-                    <div style="font-size: 0.7rem; color: #003366; font-weight: bold;">UNITETEK INTERNATIONAL CO., LTD.</div>
-                    <div style="font-size: 0.7rem; color: #000;">無鹵阻燃劑 | 鹵素阻燃協效劑 | VGCF碳管 | 氮化鋁粉 | 熱電材料</div>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-4">
+        <div class="container-fluid px-5"> <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./static/logo.jpeg" alt="Logo" style="height:90px;"> <div class="ms-3">
+                    <div class="company-name">日將事業有限公司</div>
+                    <div class="company-eng">UNITETEK INTERNATIONAL CO., LTD.</div>
+                    <div class="company-slogan">無鹵阻燃劑 | 鹵素阻燃協效劑 | VGCF碳管 | 氮化鋁粉 | 熱電材料</div>
                 </div>
             </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item ms-4"><a class="nav-link" href="index.html">首頁</a></li>
-                    <li class="nav-item ms-4"><a class="nav-link" href="about.html">關於日將</a></li>
-                    <li class="nav-item ms-4"><a class="nav-link" href="contact.html">聯絡我們</a></li>
-                    <li class="nav-item ms-4"><a class="nav-link" href="industry_list.html">產業資訊</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">關於日將</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">聯絡我們</a></li>
+                    <li class="nav-item"><a class="nav-link" href="industry_list.html">產業資訊</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container mt-5">
-        <h2 class="fw-bold mb-4">產業資訊 Industry Insights</h2>
-        <a href="article_001.html" class="news-item">
-            <div class="img-placeholder">圖檔準備中...</div>
-            <div>
-                <h5 class="fw-bold mb-1">統一為何想擺脫家樂福授權？其實和三氧化二銻供應鏈問題很像</h5>
-                <p class="mb-0 text-muted">探討品牌經營自主權的重要性，並延伸至中國銻礦出口管制對阻燃材料市場的深度影響。</p>
-            </div>
-        </a>
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="fw-bold mb-4" style="font-size: 2rem;">產業資訊 Industry Insights</h2>
+                <hr class="mb-4">
+                
+                <a href="article_001.html" class="news-item shadow-sm">
+                    <div class="img-placeholder">圖檔準備中...</div>
+                    <div>
+                        <h4 class="fw-bold mb-2">統一為何想擺脫家樂福授權？其實和三氧化二銻供應鏈問題很像</h4>
+                        <p class="mb-0 text-muted" style="font-size: 1.1rem;">探討品牌經營自主權的重要性，並延伸至中國銻礦出口管制對阻燃材料市場的深度影響。</p>
+                    </div>
+                </a>
+                
+                </div>
+        </div>
     </div>
 
 </body>
