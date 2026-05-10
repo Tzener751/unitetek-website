@@ -33,9 +33,9 @@ def contact():
 def history():
     return render_template('history.html')
 
-@app.route('/news')
+@app.route('/industry_list')
 def news():
-    return render_template('news.html')
+    return render_template('industry_list.html')
 
 
 @app.route('/products/utfr-nal')
