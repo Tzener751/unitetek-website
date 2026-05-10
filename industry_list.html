@@ -2,18 +2,13 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="7bcf86ca3785c576" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日將事業有限公司 UNITETEK - 三氧化二銻替代品、無鹵阻燃劑、VGCF碳管、NAL無銻阻燃協效劑</title>
-    <meta name="description" content="聯繫日將事業有限公司（UNITETEK）。我們提供專業的無鹵阻燃劑、VGCF碳管與化學材料諮詢。1995年成立，位於高雄鳳山，為您提供最高性價比的工業材料方案。">
-    <meta name="keywords" content="日將事業, UNITETEK, 聯絡日將, 無鹵阻燃劑, NAL, VGCF碳管, 鳳山化學材料, 阻燃劑供應商">
-
-    <link rel="icon" type="image/jpeg" href="./static/logo.jpeg?v=2">
+    <title>產業資訊 | 日將事業有限公司</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <style>
+        /* 100% 複製你 index.html 的導覽列樣式 */
         :root { --brand-blue: #007FFF; }
         .main-nav .nav-link { 
             color: var(--brand-blue) !important; 
@@ -24,41 +19,38 @@
             transition: all 0.2s; 
         }
         .main-nav .nav-link:hover { background-color: #f8f9fa; transform: translateY(-1px); }
-        .text-brand-blue { color: var(--brand-blue) !important; }
-        .table th { white-space: nowrap; }
-        .icon-line { color: #06C755 !important; }
-        .icon-email { color: #004a99 !important; }
-        .social-icon {
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .social-icon:hover {
-            transform: scale(1.2) translateY(-3px);
-            filter: brightness(1.1);
-        }
 
-        #productTab .list-group-item {
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.3s;
-            color: #444;
+        /* 文章卡片樣式：仿照政府新聞稿那種橫向排列 */
+        .news-item {
+            background-color: #f5f5f5;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            border-radius: 4px;
+            transition: 0.2s;
         }
-        #productTab .list-group-item.active {
-            background-color: #fff !important;
-            color: var(--brand-blue) !important;
-            border-left: 5px solid var(--brand-blue) !important;
-            font-weight: bold;
-        }
-        #productTab .list-group-item:hover:not(.active) {
-            background-color: #e9ecef;
-        }
-        .tab-pane.fade {
-            transition: opacity 0.2s linear;
+        .news-item:hover { background-color: #ededed; }
+        
+        .img-placeholder { 
+            width: 150px; 
+            height: 100px; 
+            background: #ddd; 
+            margin-right: 25px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 0.9rem; 
+            color: #666; 
+            border: 1px solid #ccc;
+            flex-shrink: 0;
         }
     </style>
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg main-nav bg-white shadow-sm sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -73,28 +65,28 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item ms-lg-4"><a class="nav-link text-brand-blue fw-bold" href="index.html">首頁</a></li>
-                    <li class="nav-item ms-lg-4"><a class="nav-link text-brand-blue fw-bold" href="about.html">關於日將</a></li>
-                    <li class="nav-item ms-lg-4"><a class="nav-link text-brand-blue fw-bold" href="contact.html">聯絡我們</a></li>
-                    <li class="nav-item ms-lg-4"><a class="nav-link text-brand-blue fw-bold" href="industry_list.html">產業資訊</a></li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ms-lg-4"><a class="nav-link fw-bold" href="index.html">首頁</a></li>
+                    <li class="nav-item ms-lg-4"><a class="nav-link fw-bold" href="about.html">關於日將</a></li>
+                    <li class="nav-item ms-lg-4"><a class="nav-link fw-bold" href="contact.html">聯絡我們</a></li>
+                    <li class="nav-item ms-lg-4"><a class="nav-link fw-bold" href="industry_list.html">產業資訊</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-5">
+    <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-12">
-                
                 <a href="article_001.html" class="news-item shadow-sm">
                     <div class="img-placeholder">圖檔準備中...</div>
-                    <div>
+                    <div class="flex-grow-1">
                         <h4 class="fw-bold mb-2">統一為何想擺脫家樂福授權？其實和三氧化二銻供應鏈問題很像</h4>
                         <p class="mb-0 text-muted" style="font-size: 1.1rem;">探討品牌經營自主權的重要性，並延伸至中國銻礦出口管制對阻燃材料市場的深度影響。</p>
+                        <div class="mt-2 text-primary" style="text-decoration: underline;">閱讀全文</div>
                     </div>
                 </a>
-                
+
                 </div>
         </div>
     </div>
