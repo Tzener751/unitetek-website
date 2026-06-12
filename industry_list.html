@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <style>
-        /* 100% 複製你 index.html 的導覽列樣式 */
         :root { --brand-blue: #007FFF; }
         .main-nav .nav-link { 
             color: var(--brand-blue) !important; 
@@ -20,7 +19,6 @@
         }
         .main-nav .nav-link:hover { background-color: #f8f9fa; transform: translateY(-1px); }
 
-        /* 文章卡片樣式：仿照政府新聞稿那種橫向排列 */
         .news-item {
             background-color: #f5f5f5;
             margin-bottom: 12px;
@@ -79,66 +77,105 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <a href="antimony-supply-chain-risk-001.html" class="news-item shadow-sm">
-                    <div class="news-image-box">
-                        <img src="./static/article_001.png" alt="統一集團收購家樂福品牌 | 三氧化二銻供應鏈問題">
+    <div class="container mt-5">
+        
+        <ul class="nav nav-tabs mb-4" id="industryTab" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active" id="articles-tab" data-bs-toggle="tab" data-bs-target="#articles-content" type="button" role="tab">
+                    📝 文章
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="pdfs-tab" data-bs-toggle="tab" data-bs-target="#pdfs-content" type="button" role="tab">
+                    📂 PDF 下載
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="industryTabContent">
+            
+            <div class="tab-pane fade show active" id="articles-content" role="tabpanel">
+                
+                <div class="row justify-content-center mt-4">
+                    <div class="col-12">
+                        <a href="antimony-supply-chain-risk-001.html" class="news-item shadow-sm">
+                            <div class="news-image-box">
+                                <img src="./static/article_001.png" alt="統一集團收購家樂福品牌 | 三氧化二銻供應鏈問題">
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="text-muted fs-6 ms-auto pt-2">日期 | 2026-05-10</div>
+                                <h4 class="fw-bold mb-2">統一集團為何想擺脫家樂福商標？其實和三氧化二銻供應鏈問題很像</h4>
+                                <p class="mb-0 text-muted" style="font-size: 1.1rem;">探討 brand 經營自主權的重要性，並延伸至中國銻礦出口管制對阻燃材料市場的深度影響。</p>
+                                <div class="mt-2 text-primary" style="text-decoration: underline;">閱讀全文</div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="flex-grow-1">
-                        <div class="text-muted fs-6 ms-auto pt-2">
-                            日期 | 2026-05-10
-                        </div>
-                        <h4 class="fw-bold mb-2">統一集團為何想擺脫家樂福商標？其實和三氧化二銻供應鏈問題很像</h4>
-                        <p class="mb-0 text-muted" style="font-size: 1.1rem;">探討品牌經營自主權的重要性，並延伸至中國銻礦出口管制對阻燃材料市場的深度影響。</p>
-                        <div class="mt-2 text-primary" style="text-decoration: underline;">閱讀全文</div>
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                    <div class="col-12">
+                        <a href="Free-Radical-Chain-Reaction-in-Polymer-Combustion-002.html" class="news-item shadow-sm">
+                            <div class="news-image-box">
+                                <img src="./static/article_002.webp" alt="高分子燃燒自由基鏈鎖反應：電線走火如何演變成火災">
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="text-muted fs-6 ms-auto pt-2">日期 | 2026-05-25</div>
+                                <h4 class="fw-bold mb-2">從電線走火到自由基鏈鎖反應：高分子燃燒如引起火災</h4>
+                                <p class="mb-0 text-muted" style="font-size: 1.1rem;">探討高分子材料受熱後的自由基鏈鎖反應</p>
+                                <div class="mt-2 text-primary" style="text-decoration: underline;">閱讀全文</div>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                    <div class="col-12">
+                        <a href="academic_research_to_application.html" class="news-item shadow-sm">
+                            <div class="news-image-box">
+                                <img src="./static/article_003.webp" alt="學術研究如何走向產業">
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="text-muted fs-6 ms-auto pt-2">日期 | 2026-06-05</div>
+                                <h4 class="fw-bold mb-2">學術研究如何走向產業?</h4>
+                                <p class="mb-0 text-muted" style="font-size: 1.1rem;">內容：學術研究如何走向產業、國內阻燃領域碩博士論文產出資料集</p>
+                                <div class="mt-2 text-primary" style="text-decoration: underline;">閱讀全文</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
+
+            <div class="tab-pane fade" id="pdfs-content" role="tabpanel">
+                <div class="table-responsive bg-white shadow-sm rounded border mt-4">
+                    <table class="table table-hover align-middle mb-0" style="font-size: 14px;">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 75%; padding: 15px;">資料說明</th>
+                                <th style="width: 10%; padding: 15px;">格式</th>
+                                <th style="width: 15%; padding: 15px; text-align: right;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 20px 15px;">
+                                    <strong class="text-dark d-block mb-1" style="font-size: 1.05rem;">UTFR-NAL 在 EVA 發泡材耐燃防火之應用</strong>
+                                    <span class="text-muted">針對 EVA 發泡材質無銻（Zero-Sb）且通過 UL94-V0 的需求，兼顧輕量化、回彈性與成本考量，提出兩款代表性配方。</span>
+                                </td>
+                                <td><span class="badge bg-danger-subtle text-danger border border-danger-subtle px-2 py-1 fw-bold">.PDF</span></td>
+                                <td style="text-align: right; padding: 15px;">
+                                    <a href="https://tzener751.github.io/unitetek-website/static/pdf/UTFR-NAL_in_EVA_ 080626.pdf" target="_blank" class="btn btn-outline-danger btn-sm fw-bold">
+                                        線上查看
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <a href="Free-Radical-Chain-Reaction-in-Polymer-Combustion-002.html" class="news-item shadow-sm">
-                    <div class="news-image-box">
-                        <img src="./static/article_002.webp" alt="高分子燃燒自由基鏈鎖反應：電線走火如何演變成火災">
-                    </div>
-                    <div class="flex-grow-1">
-                        <div class="text-muted fs-6 ms-auto pt-2">
-                            日期 | 2026-05-25
-                        </div>
-                        <h4 class="fw-bold mb-2">從電線走火到自由基鏈鎖反應：高分子燃燒如引起火災</h4>
-                        <p class="mb-0 text-muted" style="font-size: 1.1rem;">探討高分子材料受熱後的自由基鏈鎖反應</p>
-                        <div class="mt-2 text-primary" style="text-decoration: underline;">閱讀全文</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <a href="academic_research_to_application.html" class="news-item shadow-sm">
-                    <div class="news-image-box">
-                        <img src="./static/article_003.webp" alt="學術研究如何走向產業">
-                    </div>
-                    <div class="flex-grow-1">
-                        <div class="text-muted fs-6 ms-auto pt-2">
-                            日期 | 2026-06-05
-                        </div>
-                        <h4 class="fw-bold mb-2">學術研究如何走向產業?</h4>
-                        <p class="mb-0 text-muted" style="font-size: 1.1rem;">內容：學術研究如何走向產業、國內阻燃領域碩博士論文產出資料集</p>
-                        <div class="mt-2 text-primary" style="text-decoration: underline;">閱讀全文</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
