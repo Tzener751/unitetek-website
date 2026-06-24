@@ -92,7 +92,7 @@
 
         <div class="tab-content" id="industryTabContent">
             
-            <!-- 文章容器：現在裡面很乾淨，交給 JavaScript 處理 -->
+            
             <div class="tab-pane fade show active" id="articles-content" role="tabpanel"></div>
 
             <div class="tab-pane fade" id="pdfs-content" role="tabpanel">
@@ -153,7 +153,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // 1. 文章資料庫：以後要加新文章，直接在下面按格式補上就好，完全不用管順序！
+        
         const articlesData = [
             {
                 url: "antimony-supply-chain-risk-001.html",
@@ -197,10 +197,10 @@
             }
         ];
 
-        // 2. 核心：自動依據日期排序（最新排在最上面）
+        
         articlesData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-        // 3. 把排序完的資料轉為漂亮格式的 HTML 塞進網頁
+        
         const container = document.getElementById('articles-content');
         container.innerHTML = articlesData.map(article => `
             <div class="row justify-content-center mt-4">
