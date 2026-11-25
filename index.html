@@ -189,95 +189,188 @@
                 </div>
             </div>
 
-            <!-- 4. UTFR-NAL Flame Retardant Synergist User Guide in PVC Granules -->
+            <!-- 4. UTFR-NAL Flame Retardant Synergist User Guide in PVC Granules (支援中英文切換) -->
             <div class="tab-pane fade" id="content-nal-pvc" role="tabpanel">
                 <div class="container-fluid px-lg-5">
-                    <div class="row align-items-start g-5">
-                        <!-- 左側摘要與按鈕 -->
-                        <div class="col-lg-4">
-                            <h2 class="h3 fw-bold mb-3" style="color: #003366; line-height: 1.35;">
-                                UTFR-NAL Flame Retardant Synergist User Guide in PVC Granules
-                            </h2>
-                            <p class="text-muted mb-4">PVC 粒料無三氧化二銻阻燃協效劑使用指南</p>
-                            <ul class="list-unstyled h5 lh-lg mb-4">
-                                <li>🔹 <strong>取代三氧化二銻 50%～100%</strong></li>
-                                <li>🔹 <strong>半取代省 NTD 7–9/kg；全無銻省 NTD 16–17/kg</strong></li>
-                                <li>🔹 <strong>可塑劑 50 PHR 以上適用</strong></li>
-                                <li>🔹 <strong>搭配 TCP 微調可塑劑，維持硬度與加工性</strong></li>
-                            </ul>
-                            <div class="d-flex gap-3 flex-wrap mb-4">
-                                <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4 shadow" style="background-color: #003366; border-color: #003366;">立即詢價</a>
-                                <a href="./static/pdf/UTFR-NAL在PVC使用指南_131126.pdf" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">使用指南 PDF</a>
-                            </div>
-                            <div class="alert alert-light border small text-secondary mb-0">
-                                玩具、食品接觸、環保標章及一線電子品牌（如 Apple、Dell、HP）已全面禁限用或淘汰三氧化二銻；建議及早評估無銻或減銻配方。
-                            </div>
+                    
+                    <!-- 中英文切換控制列 -->
+                    <div class="d-flex justify-content-end mb-3">
+                        <div class="btn-group" role="group" aria-label="Language switch">
+                            <button type="button" class="btn btn-sm btn-primary active" id="btn-pvc-zh" onclick="switchPvcLang('zh')" style="background-color: #003366; border-color: #003366;">中文</button>
+                            <button type="button" class="btn btn-sm btn-outline-primary" id="btn-pvc-en" onclick="switchPvcLang('en')" style="border-color: #003366; color: #003366;">English</button>
                         </div>
+                    </div>
 
-                        <!-- 右側配方實測表與技術解析 -->
-                        <div class="col-lg-8">
-                            <h3 class="h5 fw-bold mb-3" style="color: #003366;">無三氧化二銻 PVC 配方實測參考（公司內部測試數據）</h3>
-                            <div class="table-responsive mb-4">
-                                <table class="table table-bordered table-sm align-middle text-center">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>項目 / PHR</th>
-                                            <th>傳統對照（亞0）</th>
-                                            <th class="table-success">無銻組（亞321）</th>
-                                            <th class="table-success">無銻組（亞322）</th>
-                                            <th class="table-success">無銻組（亞323）</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="fw-bold">S-65 / 重鈣 / 鈣鋅安定劑</td>
-                                            <td colspan="4">100 / 40 / 4 PHR</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-bold">DOTP / TCP</td>
-                                            <td>58 / 0</td>
-                                            <td>52 / 6</td>
-                                            <td>52 / 7</td>
-                                            <td>52 / 8</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-bold">NAL / 三氧化二銻</td>
-                                            <td>0 / 6</td>
-                                            <td>6 / 0</td>
-                                            <td>6 / 0</td>
-                                            <td>6 / 0</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-bold">Shore A（3秒）</td>
-                                            <td>86.5A</td>
-                                            <td>86A</td>
-                                            <td>85A</td>
-                                            <td>84.5A</td>
-                                        </tr>
-                                        <tr class="table-warning">
-                                            <td class="fw-bold">預估成本（NTD/kg）</td>
-                                            <td class="text-decoration-line-through text-muted">61.54</td>
-                                            <td class="fw-bold text-danger">44.38（省 17.16）</td>
-                                            <td class="fw-bold text-danger">44.90（省 16.64）</td>
-                                            <td class="fw-bold text-danger">45.43（省 16.11）</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <!-- ==================== 中文版本 (預設顯示) ==================== -->
+                    <div id="pvc-lang-zh">
+                        <div class="row align-items-start g-5">
+                            <div class="col-lg-4">
+                                <h2 class="h3 fw-bold mb-3" style="color: #003366; line-height: 1.35;">
+                                    UTFR-NAL Flame Retardant Synergist User Guide in PVC Granules
+                                </h2>
+                                <p class="text-muted mb-4">PVC 粒料無三氧化二銻阻燃協效劑使用指南</p>
+                                <ul class="list-unstyled h5 lh-lg mb-4">
+                                    <li>🔹 <strong>取代三氧化二銻 50%～100%</strong></li>
+                                    <li>🔹 <strong>半取代省 NTD 7–9/kg；全無銻省 NTD 16–17/kg</strong></li>
+                                    <li>🔹 <strong>可塑劑 50 PHR 以上適用</strong></li>
+                                    <li>🔹 <strong>搭配 TCP 微調可塑劑，維持硬度與加工性</strong></li>
+                                </ul>
+                                <div class="d-flex gap-3 flex-wrap mb-4">
+                                    <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4 shadow" style="background-color: #003366; border-color: #003366;">立即詢價</a>
+                                    <a href="./static/pdf/UTFR-NAL在PVC使用指南_131126.pdf" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">使用指南 PDF</a>
+                                </div>
+                                <div class="alert alert-light border small text-secondary mb-0">
+                                    玩具、食品接觸、環保標章及一線電子品牌（如 Apple、Dell、HP）已全面禁限用或淘汰三氧化二銻；建議及早評估無銻或減銻配方。
+                                </div>
                             </div>
-                            <p class="small text-muted mb-4">
-                                ※ 原料來源不同測試結果會有差異，僅供參考；UL 94（1mm）燃燒秒數詳見完整使用指南 PDF。
-                            </p>
 
-                            <div class="p-3 bg-light rounded border">
-                                <p class="small mb-2 text-secondary">
-                                    此為公司內部測試數據，由上述兩表格可知，使用含有 UTFR-NAL 即可達到符合技術規範，不含三氧化二銻且大幅降低成本，採取此法配製粒料每公斤可節省 NTD 16–17 元。
+                            <div class="col-lg-8">
+                                <h3 class="h5 fw-bold mb-3" style="color: #003366;">無三氧化二銻 PVC 配方實測參考（公司內部測試數據）</h3>
+                                <div class="table-responsive mb-4">
+                                    <table class="table table-bordered table-sm align-middle text-center">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>項目 / PHR</th>
+                                                <th>傳統對照（亞0）</th>
+                                                <th class="table-success">無銻組（亞321）</th>
+                                                <th class="table-success">無銻組（亞322）</th>
+                                                <th class="table-success">無銻組（亞323）</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="fw-bold">S-65 / 重鈣 / 鈣鋅安定劑</td>
+                                                <td colspan="4">100 / 40 / 4 PHR</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">DOTP / TCP</td>
+                                                <td>58 / 0</td>
+                                                <td>52 / 6</td>
+                                                <td>52 / 7</td>
+                                                <td>52 / 8</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">NAL / 三氧化二銻</td>
+                                                <td>0 / 6</td>
+                                                <td>6 / 0</td>
+                                                <td>6 / 0</td>
+                                                <td>6 / 0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Shore A（3秒）</td>
+                                                <td>86.5A</td>
+                                                <td>86A</td>
+                                                <td>85A</td>
+                                                <td>84.5A</td>
+                                            </tr>
+                                            <tr class="table-warning">
+                                                <td class="fw-bold">預估成本（NTD/kg）</td>
+                                                <td class="text-decoration-line-through text-muted">61.54</td>
+                                                <td class="fw-bold text-danger">44.38（省 17.16）</td>
+                                                <td class="fw-bold text-danger">44.90（省 16.64）</td>
+                                                <td class="fw-bold text-danger">45.43（省 16.11）</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="small text-muted mb-4">
+                                    ※ 原料來源不同測試結果會有差異，僅供參考；UL 94（1mm）燃燒秒數詳見完整使用指南 PDF。
                                 </p>
-                                <p class="small mb-0 fw-semibold" style="color: #003366;">
-                                    These are internal company test data. Formulations with UTFR-NAL meet technical specifications without antimony trioxide while significantly cutting costs, saving NTD 16–17/kg on compounded pellets.
-                                </p>
+
+                                <div class="p-3 bg-light rounded border">
+                                    <p class="small mb-0 fw-semibold" style="color: #003366;">
+                                        此為公司內部測試數據，由上述兩表格可知，使用含有 UTFR-NAL 即可達到符合技術規範，不含三氧化二銻且大幅降低成本，採取此法配製粒料每公斤可節省 NTD 16–17 元。
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- ==================== 英文版本 (點擊 English 顯示) ==================== -->
+                    <div id="pvc-lang-en" style="display: none;">
+                        <div class="row align-items-start g-5">
+                            <div class="col-lg-4">
+                                <h2 class="h3 fw-bold mb-3" style="color: #003366; line-height: 1.35;">
+                                    UTFR-NAL Flame Retardant Synergist User Guide in PVC Granules
+                                </h2>
+                                <p class="text-muted mb-4">Antimony-Free Flame Retardant Solution for PVC Compounds</p>
+                                <ul class="list-unstyled h5 lh-lg mb-4">
+                                    <li>🔹 <strong>Replaces 50%–100% of Sb₂O₃</strong></li>
+                                    <li>🔹 <strong>Saves NTD 7–9/kg (50% sub) or NTD 16–17/kg (Sb-free)</strong></li>
+                                    <li>🔹 <strong>Suitable for PVC with &ge; 50 PHR plasticizer</strong></li>
+                                    <li>🔹 <strong>Maintains Shore A hardness &amp; processability via TCP tuning</strong></li>
+                                </ul>
+                                <div class="d-flex gap-3 flex-wrap mb-4">
+                                    <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4 shadow" style="background-color: #003366; border-color: #003366;">Inquire Now</a>
+                                    <a href="./static/pdf/UTFR-NAL在PVC使用指南_131126.pdf" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">User Guide PDF</a>
+                                </div>
+                                <div class="alert alert-light border small text-secondary mb-0">
+                                    Antimony trioxide (Sb₂O₃) is restricted or phased out across toys (EN 71-3), food contact materials, eco-labels (EU Ecolabel / TCO), and major electronics brands (Apple, Dell, HP). Adopting UTFR-NAL ensures compliance while cutting material costs.
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8">
+                                <h3 class="h5 fw-bold mb-3" style="color: #003366;">Antimony-Free PVC Formulation Reference (Internal Test Data)</h3>
+                                <div class="table-responsive mb-4">
+                                    <table class="table table-bordered table-sm align-middle text-center">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Item / PHR</th>
+                                                <th>Control (亞0)</th>
+                                                <th class="table-success">Sb-Free (亞321)</th>
+                                                <th class="table-success">Sb-Free (亞322)</th>
+                                                <th class="table-success">Sb-Free (亞323)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="fw-bold">S-65 / CaCO₃ / Ca-Zn Stabilizer</td>
+                                                <td colspan="4">100 / 40 / 4 PHR</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">DOTP / TCP Plasticizer</td>
+                                                <td>58 / 0</td>
+                                                <td>52 / 6</td>
+                                                <td>52 / 7</td>
+                                                <td>52 / 8</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">UTFR-NAL / Sb₂O₃</td>
+                                                <td>0 / 6</td>
+                                                <td>6 / 0</td>
+                                                <td>6 / 0</td>
+                                                <td>6 / 0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Shore A Hardness (3s)</td>
+                                                <td>86.5A</td>
+                                                <td>86A</td>
+                                                <td>85A</td>
+                                                <td>84.5A</td>
+                                            </tr>
+                                            <tr class="table-warning">
+                                                <td class="fw-bold">Est. Cost (NTD/kg)</td>
+                                                <td class="text-decoration-line-through text-muted">61.54</td>
+                                                <td class="fw-bold text-danger">44.38 (Save 17.16)</td>
+                                                <td class="fw-bold text-danger">44.90 (Save 16.64)</td>
+                                                <td class="fw-bold text-danger">45.43 (Save 16.11)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="small text-muted mb-4">
+                                    * Results may vary depending on raw material sources and are for reference only. See the User Guide PDF for detailed UL 94 (1mm) burn time data.
+                                </p>
+
+                                <div class="p-3 bg-light rounded border">
+                                    <p class="small mb-0 fw-semibold" style="color: #003366;">
+                                        These are internal company test data. Formulations with UTFR-NAL meet technical specifications without antimony trioxide while significantly cutting costs, saving NTD 16–17/kg on compounded pellets.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -295,5 +388,37 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function switchPvcLang(lang) {
+            const zhBlock = document.getElementById('pvc-lang-zh');
+            const enBlock = document.getElementById('pvc-lang-en');
+            const btnZh = document.getElementById('btn-pvc-zh');
+            const btnEn = document.getElementById('btn-pvc-en');
+
+            if (lang === 'zh') {
+                zhBlock.style.display = 'block';
+                enBlock.style.display = 'none';
+                
+                btnZh.className = 'btn btn-sm btn-primary active';
+                btnZh.style.backgroundColor = '#003366';
+                btnZh.style.color = '#fff';
+                
+                btnEn.className = 'btn btn-sm btn-outline-primary';
+                btnEn.style.backgroundColor = 'transparent';
+                btnEn.style.color = '#003366';
+            } else {
+                zhBlock.style.display = 'none';
+                enBlock.style.display = 'block';
+                
+                btnEn.className = 'btn btn-sm btn-primary active';
+                btnEn.style.backgroundColor = '#003366';
+                btnEn.style.color = '#fff';
+                
+                btnZh.className = 'btn btn-sm btn-outline-primary';
+                btnZh.style.backgroundColor = 'transparent';
+                btnZh.style.color = '#003366';
+            }
+        }
+    </script>
 </body>
 </html>
