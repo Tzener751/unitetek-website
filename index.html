@@ -41,15 +41,14 @@
             filter: brightness(1.1);
         }
 
-
-        #productTab { border-bottom: 2px solid #eee; margin-bottom: 2rem; }
+        #productTab { border-bottom: 2px solid #eee; margin-bottom: 2rem; flex-wrap: wrap; }
         #productTab .nav-link {
             color: #666 !important;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             border: none;
             border-bottom: 3px solid transparent;
             border-radius: 0;
-            padding: 1rem 1.5rem;
+            padding: 0.85rem 1rem;
             transition: all 0.3s;
         }
         #productTab .nav-link.active {
@@ -88,7 +87,7 @@
         </div>
     </nav>
 
-    <main class="bg-white">
+    <main class="bg-white pb-5">
         <div class="border-bottom sticky-top bg-white py-2" style="top: 80px; z-index: 1020;"> 
             <div class="container">
                 <ul class="nav nav-pills nav-justified" id="productTab" role="tablist">
@@ -101,11 +100,15 @@
                     <li class="nav-item">
                         <button class="nav-link fw-bold py-3" id="tab-poc" data-bs-toggle="pill" data-bs-target="#content-poc" type="button" role="tab">UTFR-POC 無鹵阻燃劑</button>
                     </li>
+                    <li class="nav-item">
+                        <button class="nav-link fw-bold py-3" id="tab-nal-pvc" data-bs-toggle="pill" data-bs-target="#content-nal-pvc" type="button" role="tab">UTFR-NAL (PVC指南)</button>
+                    </li>
                 </ul>
             </div>
         </div>
 
         <div class="tab-content mt-4" id="productTabContent">
+            <!-- 1. VGCF 碳管 -->
             <div class="tab-pane fade show active" id="content-vgcf" role="tabpanel">
                 <div class="container-fluid px-lg-5">
                     <div class="row align-items-center g-5">
@@ -117,7 +120,7 @@
                                 <li>🔹 <strong>長度7微米 / 管徑110奈米</strong></li>
                                 <li>🔹 <strong>適用於能源、感知器、漿料等</strong></li>
                             </ul>
-                            <div class="d-flex gap-3">
+                            <div class="d-flex gap-3 flex-wrap">
                                 <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5 shadow">立即詢價</a>
                                 <a href="./static/pdf/product_vgcf_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">產品規格書</a>
                             </div>
@@ -125,14 +128,14 @@
                         <div class="col-lg-8 text-center">
                             <img src="./static/product_vgcf.png" 
                                  class="img-fluid w-100 rounded" 
-                                 style="max-height: 600px; 
-                                 object-fit: contain;"
+                                 style="max-height: 600px; object-fit: contain;"
                                  alt="VGCF碳管SEM圖：不同倍率放大形貌圖 - 日將事業有限公司 UNITETEK">
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- 2. UTFR-NAL 協效劑 -->
             <div class="tab-pane fade" id="content-nal" role="tabpanel">
                 <div class="container-fluid px-lg-5">
                     <div class="row align-items-center g-5">
@@ -142,9 +145,9 @@
                                 <li>✅ <strong>不含銻, 可替代三氧化二銻</strong></li>
                                 <li>✅ <strong>鹵素阻燃劑最好的搭配</strong></li>
                                 <li>✅ <strong>性價比高</strong></li>
-                                <li>✅ <strong>適用於加工溫度 < 250 ℃ 之橡塑膠</strong></li>
+                                <li>✅ <strong>適用於加工溫度 &lt; 250 ℃ 之橡塑膠</strong></li>
                             </ul>
-                            <div class="d-flex gap-3">
+                            <div class="d-flex gap-3 flex-wrap">
                                 <a href="contact.html" class="btn btn-success btn-lg rounded-pill px-5 shadow text-white">立即詢價</a>
                                 <a href="./static/pdf/product_NAL_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">產品規格書</a>
                             </div>
@@ -152,14 +155,14 @@
                         <div class="col-lg-8 text-center">
                             <img src="./static/product_NAL.png" 
                                  class="img-fluid w-100 rounded" 
-                                 style="max-height: 600px; 
-                                 object-fit: contain;"
+                                 style="max-height: 600px; object-fit: contain;"
                                  alt="UTFR-NAL 阻燃協效劑：UL94-V0 耐燃測試等級表與 TGA 熱重分析曲線圖 - 日將事業有限公司 UNITETEK">
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- 3. UTFR-POC 無鹵阻燃劑 -->
             <div class="tab-pane fade" id="content-poc" role="tabpanel">
                 <div class="container-fluid px-lg-5">
                     <div class="row align-items-center g-5">
@@ -168,10 +171,10 @@
                             <ul class="list-unstyled h5 lh-lg mb-5">
                                 <li>⭕ <strong>磷化合物為磷酸鹽類</strong></li>
                                 <li>⭕ <strong>磷氮型複合配方</strong></li>
-                                <li>⭕ <strong>加工溫度 < 230 ℃ 之橡塑膠</strong></li>
+                                <li>⭕ <strong>加工溫度 &lt; 230 ℃ 之橡塑膠</strong></li>
                                 <li>⭕ <strong>符合綠色環保規範</strong></li>
                             </ul>
-                            <div class="d-flex gap-3">
+                            <div class="d-flex gap-3 flex-wrap">
                                 <a href="contact.html" class="btn btn-danger btn-lg rounded-pill px-5 shadow">立即詢價</a>
                                 <a href="./static/pdf/product_POC_020526.pdf" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">產品規格書</a>
                             </div>
@@ -179,29 +182,106 @@
                         <div class="col-lg-8 text-center">
                             <img src="./static/product_POC.png" 
                                  class="img-fluid w-100 rounded" 
-                                 style="max-height: 600px; 
-                                 object-fit: contain;"
+                                 style="max-height: 600px; object-fit: contain;"
                                  alt="UTFR-POC 無鹵阻燃劑 TGA 熱重分析曲線 - 日將事業有限公司 UNITETEK">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. UTFR-NAL Flame Retardant Synergist User Guide in PVC Granules -->
+            <div class="tab-pane fade" id="content-nal-pvc" role="tabpanel">
+                <div class="container-fluid px-lg-5">
+                    <div class="row align-items-start g-5">
+                        <!-- 左側摘要與按鈕 -->
+                        <div class="col-lg-4">
+                            <h2 class="h3 fw-bold mb-3" style="color: #003366; line-height: 1.35;">
+                                UTFR-NAL Flame Retardant Synergist User Guide in PVC Granules
+                            </h2>
+                            <p class="text-muted mb-4">PVC 粒料無三氧化二銻阻燃協效劑使用指南</p>
+                            <ul class="list-unstyled h5 lh-lg mb-4">
+                                <li>🔹 <strong>取代三氧化二銻 50%～100%</strong></li>
+                                <li>🔹 <strong>半取代省 NTD 7–9/kg；全無銻省 NTD 16–17/kg</strong></li>
+                                <li>🔹 <strong>可塑劑 50 PHR 以上適用</strong></li>
+                                <li>🔹 <strong>搭配 TCP 微調可塑劑，維持硬度與加工性</strong></li>
+                            </ul>
+                            <div class="d-flex gap-3 flex-wrap mb-4">
+                                <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4 shadow" style="background-color: #003366; border-color: #003366;">立即詢價</a>
+                                <a href="./static/pdf/UTFR-NAL在PVC使用指南_131126.pdf" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">使用指南 PDF</a>
+                            </div>
+                            <div class="alert alert-light border small text-secondary mb-0">
+                                玩具、食品接觸、環保標章及一線電子品牌（如 Apple、Dell、HP）已全面禁限用或淘汰三氧化二銻；建議及早評估無銻或減銻配方。
+                            </div>
+                        </div>
+
+                        <!-- 右側配方實測表與技術解析 -->
+                        <div class="col-lg-8">
+                            <h3 class="h5 fw-bold mb-3" style="color: #003366;">無三氧化二銻 PVC 配方實測參考（公司內部測試數據）</h3>
+                            <div class="table-responsive mb-4">
+                                <table class="table table-bordered table-sm align-middle text-center">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>項目 / PHR</th>
+                                            <th>傳統對照（亞0）</th>
+                                            <th class="table-success">無銻組（亞321）</th>
+                                            <th class="table-success">無銻組（亞322）</th>
+                                            <th class="table-success">無銻組（亞323）</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold">S-65 / 重鈣 / 鈣鋅安定劑</td>
+                                            <td colspan="4">100 / 40 / 4 PHR</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">DOTP / TCP</td>
+                                            <td>58 / 0</td>
+                                            <td>52 / 6</td>
+                                            <td>52 / 7</td>
+                                            <td>52 / 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">NAL / 三氧化二銻</td>
+                                            <td>0 / 6</td>
+                                            <td>6 / 0</td>
+                                            <td>6 / 0</td>
+                                            <td>6 / 0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Shore A（3秒）</td>
+                                            <td>86.5A</td>
+                                            <td>86A</td>
+                                            <td>85A</td>
+                                            <td>84.5A</td>
+                                        </tr>
+                                        <tr class="table-warning">
+                                            <td class="fw-bold">預估成本（NTD/kg）</td>
+                                            <td class="text-decoration-line-through text-muted">61.54</td>
+                                            <td class="fw-bold text-danger">44.38（省 17.16）</td>
+                                            <td class="fw-bold text-danger">44.90（省 16.64）</td>
+                                            <td class="fw-bold text-danger">45.43（省 16.11）</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="small text-muted mb-4">
+                                ※ 原料來源不同測試結果會有差異，僅供參考；UL 94（1mm）燃燒秒數詳見完整使用指南 PDF。
+                            </p>
+
+                            <div class="p-3 bg-light rounded border">
+                                <p class="small mb-2 text-secondary">
+                                    此為公司內部測試數據，由上述兩表格可知，使用含有 UTFR-NAL 即可達到符合技術規範，不含三氧化二銻且大幅降低成本，採取此法配製粒料每公斤可節省 NTD 16–17 元。
+                                </p>
+                                <p class="small mb-0 fw-semibold" style="color: #003366;">
+                                    These are internal company test data. Formulations with UTFR-NAL meet technical specifications without antimony trioxide while significantly cutting costs, saving NTD 16–17/kg on compounded pellets.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <script src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js)"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var triggerTabList = [].slice.call(document.querySelectorAll('#productTab button'))
-            triggerTabList.forEach(function (triggerEl) {
-                var tabTrigger = new bootstrap.Tab(triggerEl)
-                triggerEl.addEventListener('click', function (event) {
-                    event.preventDefault()
-                    tabTrigger.show()
-                })
-            })
-        });
-    </script>
 
     <footer class="py-4 bg-light border-top">
         <div class="container text-center">
@@ -210,7 +290,6 @@
                 <a href="https://line.me/ti/p/~unitetek" target="_blank" class="fs-3 social-icon icon-line" title="LINE"><i class="fab fa-line"></i></a>
                 <a href="mailto:unitetek@unite-tek.com.tw" class="fs-3 social-icon icon-email" title="發送郵件"><i class="fas fa-envelope"></i></a>
                 <a href="./static/wechat_qr.jpg" target="_blank" class="fs-3 social-icon" title="WeChat" style="color: #07C160;"><i class="fab fa-weixin"></i></a>
-            </div>
             </div>
         </div>
     </footer>
